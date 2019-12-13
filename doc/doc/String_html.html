@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>String.html - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+<div id="table-of-contents">
+  <nav class="section">
+    <h3 class="section-header">Table of Contents</h3>
+    <ul>
+      <li><a href="#label-%26gt%3B+true">&amp;gt; true</a>
+      <li><a href="#label-%26gt%3B+false%3C%2Fpre%3E">&amp;gt; false&lt;/pre&gt;</a>
+      <li><a href="#label-%26gt%3B+true">&amp;gt; true</a>
+      <li><a href="#label-%26gt%3B+false%3C%2Fpre%3E">&amp;gt; false&lt;/pre&gt;</a>
+      <li><a href="#label-%26gt%3B+%23%26lt%3BDateTime%3A+2018-11-01T14%3A12%3A10%2B00%3A00+%28%282458424j%2C51130s%2C0n%29%2C%2B0s%2C2299161j%29%26gt%3B%3C%2Fpre%3E">&amp;gt; #&amp;lt;DateTime: 2018-11-01T14:12:10+00:00 ((2458424j,51130s,0n),+0s,2299161j)&amp;gt;&lt;/pre&gt;</a>
+      <li><a href="#label-%26gt%3B+%26quot%3B2018+Nov+01+14%3A12%3A10%26quot%3B%3C%2Fpre%3E">&amp;gt; &amp;quot;2018 Nov 01 14:12:10&amp;quot;&lt;/pre&gt;</a>
+    </ul>
+  </nav>
+</div>
+
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../RCS/LCLS-LogBeat3_rb,v.html">LCLS-LogBeat3.rb,v</a>
+  
+    <li class="file"><a href="../RCS/logLine_rb,v.html">logLine.rb,v</a>
+  
+    <li class="file"><a href="../README.html">README</a>
+  
+    <li class="file"><a href="../doc/DateTime_html.html">DateTime.html</a>
+  
+    <li class="file"><a href="../doc/ElasticTalk_html.html">ElasticTalk.html</a>
+  
+    <li class="file"><a href="../doc/IO_html.html">IO.html</a>
+  
+    <li class="file"><a href="../doc/LogLine_html.html">LogLine.html</a>
+  
+    <li class="file"><a href="../doc/LogWalker_html.html">LogWalker.html</a>
+  
+    <li class="file"><a href="../doc/Object_html.html">Object.html</a>
+  
+    <li class="file"><a href="../doc/RCS/LCLS-LogBeat3_rb,v_html.html">LCLS-LogBeat3_rb,v.html</a>
+  
+    <li class="file"><a href="../doc/RCS/logLine_rb,v_html.html">logLine_rb,v.html</a>
+  
+    <li class="file"><a href="../doc/README_html.html">README.html</a>
+  
+    <li class="file"><a href="../doc/String_html.html">String.html</a>
+  
+    <li class="file"><a href="../doc/Tailer_html.html">Tailer.html</a>
+  
+    <li class="file"><a href="../doc/Warbler_html.html">Warbler.html</a>
+  
+    <li class="file"><a href="../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../doc/css/fonts_css.html">fonts.css</a>
+  
+    <li class="file"><a href="../doc/css/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="../doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="../doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="../doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="../doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="../doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="../doc/makeDoc_sh_html.html">makeDoc_sh.html</a>
+  
+    <li class="file"><a href="../doc/makeJar_sh_html.html">makeJar_sh.html</a>
+  
+    <li class="file"><a href="../doc/old/logToElasticSenderRunner_sh_html.html">logToElasticSenderRunner_sh.html</a>
+  
+    <li class="file"><a href="../doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li class="file"><a href="../lib/RCS/tailer_rb,v.html">tailer.rb,v</a>
+  
+    <li class="file"><a href="../makeDoc_sh.html">makeDoc.sh</a>
+  
+    <li class="file"><a href="../makeJar_sh.html">makeJar.sh</a>
+  
+    <li class="file"><a href="../old/logToElasticSenderRunner_sh.html">logToElasticSenderRunner.sh</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../DateTime.html">DateTime</a>
+  
+    <li><a href="../ElasticTalk.html">ElasticTalk</a>
+  
+    <li><a href="../LogLine.html">LogLine</a>
+  
+    <li><a href="../LogWalker.html">LogWalker</a>
+  
+    <li><a href="../Object.html">Object</a>
+  
+    <li><a href="../String.html">String</a>
+  
+    <li><a href="../Tailer.html">Tailer</a>
+  
+    <li><a href="../Warbler.html">Warbler</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<p>&lt;!DOCTYPE html&gt;</p>
+
+<p>&lt;html&gt; &lt;head&gt; &lt;meta charset=“UTF-8”&gt;</p>
+
+<p>&lt;title&gt;class <a href="../String.html">String</a> - RDoc
+Documentation&lt;/title&gt;</p>
+
+<p>&lt;script type=“text/javascript”&gt;</p>
+
+<pre>var rdoc_rel_prefix = &quot;./&quot;;
+var index_rel_prefix = &quot;./&quot;;</pre>
+
+<p>&lt;/script&gt;</p>
+
+<p>&lt;script src=“./js/jquery.js”&gt;&lt;/script&gt; &lt;script
+src=“./js/darkfish.js”&gt;&lt;/script&gt;</p>
+
+<p>&lt;link href=“./css/fonts.css” rel=“stylesheet”&gt; &lt;link
+href=“./css/rdoc.css” rel=“stylesheet”&gt;</p>
+
+<p>&lt;body id=“top” role=“document” class=“class”&gt; &lt;nav
+role=“navigation”&gt;</p>
+
+<pre>&lt;div id=&quot;project-navigation&quot;&gt;
+  &lt;div id=&quot;home-section&quot; role=&quot;region&quot; title=&quot;Quick navigation&quot; class=&quot;nav-section&quot;&gt;
+&lt;h2&gt;
+  &lt;a href=&quot;./index.html&quot; rel=&quot;home&quot;&gt;Home&lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;div id=&quot;table-of-contents-navigation&quot;&gt;
+  &lt;a href=&quot;./table_of_contents.html#pages&quot;&gt;Pages&lt;/a&gt;
+  &lt;a href=&quot;./table_of_contents.html#classes&quot;&gt;Classes&lt;/a&gt;
+  &lt;a href=&quot;./table_of_contents.html#methods&quot;&gt;Methods&lt;/a&gt;
+&lt;/div&gt;</pre>
+
+<p>&lt;/div&gt;</p>
+
+<pre>  &lt;div id=&quot;search-section&quot; role=&quot;search&quot; class=&quot;project-section initially-hidden&quot;&gt;
+&lt;form action=&quot;#&quot; method=&quot;get&quot; accept-charset=&quot;utf-8&quot;&gt;
+  &lt;div id=&quot;search-field-wrapper&quot;&gt;
+    &lt;input id=&quot;search-field&quot; role=&quot;combobox&quot; aria-label=&quot;Search&quot;
+           aria-autocomplete=&quot;list&quot; aria-controls=&quot;search-results&quot;
+           type=&quot;text&quot; name=&quot;search&quot; placeholder=&quot;Search&quot; spellcheck=&quot;false&quot;
+           title=&quot;Type to search, Up and Down to navigate, Enter to load&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;ul id=&quot;search-results&quot; aria-label=&quot;Search Results&quot;
+      aria-busy=&quot;false&quot; aria-expanded=&quot;false&quot;
+      aria-atomic=&quot;false&quot; class=&quot;initially-hidden&quot;&gt;&lt;/ul&gt;
+&lt;/form&gt;</pre>
+
+<p>&lt;/div&gt;</p>
+
+<pre>&lt;/div&gt;
+
+&lt;div id=&quot;class-metadata&quot;&gt;
+
+  &lt;div id=&quot;parent-class-section&quot; class=&quot;nav-section&quot;&gt;
+&lt;h3&gt;Parent&lt;/h3&gt;
+
+&lt;p class=&quot;link&quot;&gt;&lt;a href=&quot;Object.html&quot;&gt;Object&lt;/a&gt;</pre>
+
+<p>&lt;/div&gt;</p>
+
+<pre>&lt;!-- Method Quickref --&gt;</pre>
+
+<p>&lt;div id=“method-list-section” class=“nav-section”&gt;</p>
+
+<pre>&lt;h3&gt;Methods&lt;/h3&gt;
+
+&lt;ul class=&quot;link-list&quot; role=&quot;directory&quot;&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-is_FullLogDate-3F&quot;&gt;#is_FullLogDate?&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-is_LogDate-3F&quot;&gt;#is_LogDate?&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-to_DateTime&quot;&gt;#to_DateTime&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-to_ElasticDate&quot;&gt;#to_ElasticDate&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-to_FullLogDate&quot;&gt;#to_FullLogDate&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-to_LogDate&quot;&gt;#to_LogDate&lt;/a&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/div&gt;</p>
+
+<pre>&lt;/div&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<p>&lt;main role=“main” aria-labelledby=“class-String”&gt;</p>
+
+<pre class="ruby"><span class="ruby-operator">&lt;</span><span class="ruby-identifier">h1</span> <span class="ruby-identifier">id</span>=<span class="ruby-string">&quot;class-String&quot;</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;class&quot;</span><span class="ruby-operator">&gt;</span>
+  <span class="ruby-keyword">class</span> <span class="ruby-constant">String</span>
+<span class="ruby-operator">&lt;</span><span class="ruby-regexp">/h1&gt;
+
+&lt;section class=&quot;description&quot;&gt;
+</span></pre>
+
+<p>&lt;p&gt;We overload the class <code>String</code> with some methods to
+simplify the management of dates.&lt;/p&gt;</p>
+
+<p>&lt;p&gt;Dates appearing in LCLS logfiles have this format:
+&lt;strong&gt;Oct 21 10:23:11&lt;/strong&gt; . We call such formatted
+strings <code>LogDate</code>. We do not definie a specific class for this
+kind of objects. The important thing here is that <code>LogDate</code> do
+not contain the year.&lt;/p&gt;</p>
+
+<p>&lt;p&gt;We say that a &lt;a href=“String.html”&gt;String&lt;/a&gt; in this
+format: &lt;strong&gt;2018 Oct 21 10:23:11&lt;/strong&gt;, is a string in
+the <code>FullLogDate</code> format.&lt;/p&gt;</p>
+
+<p>&lt;p&gt;The following methods permit to move fast between these kind of
+objects:  <code>LogDate</code>, <code>FullLogDate</code> and
+<code>DateTime</code>.&lt;/p&gt;</p>
+
+<p>&lt;p&gt;When a conversion is needed between <code>LogDate</code> and some
+other kind of date representation requiring the
+&lt;strong&gt;year&lt;/strong&gt;, the the &lt;strong&gt;year is
+guessed&lt;/strong&gt; with this rule. “We select the year such  that
+appending it before the <code>LogDate</code> string, we get a valid
+<code>FullLogDate</code> string representing  the nearest past date respect
+to present”.&lt;/p&gt;</p>
+
+<p>&lt;p&gt;&lt;strong&gt;See also&lt;/strong&gt;. companion methods
+overloading the <code>DateTime</code> class.&lt;/p&gt;</p>
+
+<pre>&lt;/section&gt;
+
+&lt;section id=&quot;5Buntitled-5D&quot; class=&quot;documentation-section&quot;&gt;
+
+   &lt;section id=&quot;public-instance-5Buntitled-5D-method-details&quot; class=&quot;method-section&quot;&gt;
+     &lt;header&gt;
+       &lt;h3&gt;Public Instance Methods&lt;/h3&gt;
+     &lt;/header&gt;
+
+    &lt;div id=&quot;method-i-is_FullLogDate-3F&quot; class=&quot;method-detail &quot;&gt;
+
+      &lt;div class=&quot;method-heading&quot;&gt;
+        &lt;span class=&quot;method-name&quot;&gt;is_FullLogDate?&lt;/span&gt;&lt;span
+          class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+
+        &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+      &lt;/div&gt;
+
+      &lt;div class=&quot;method-description&quot;&gt;
+
+        &lt;p&gt;Returns Boolean. Checks if a &lt;code&gt;String&lt;/code&gt; is in the</pre>
+
+<p><code>FullLogDate</code> format.&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;quot;2011 Nov 01 14:12:10&amp;quot;.is_FullLogDate?</p>
+
+<h1 id="label-%26gt%3B+true">&amp;gt; true<span><a href="#label-%26gt%3B+true">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+
+<p>&amp;quot;Nov 01 14:12:10&amp;quot;.is_FullLogDate?</p>
+
+<h1 id="label-%26gt%3B+false%3C%2Fpre%3E">&amp;gt; false&lt;/pre&gt;<span><a href="#label-%26gt%3B+false%3C%2Fpre%3E">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+
+<pre>&lt;div class=&quot;method-source-code&quot; id=&quot;is_FullLogDate-3F-source&quot;&gt;
+  &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/logDate.rb, line 42&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier ruby-title”&gt;is_FullLogDate?&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-keyword&quot;&gt;begin&lt;/span&gt;
+  &lt;span class=&quot;ruby-constant&quot;&gt;DateTime&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;strptime&lt;/span&gt;(&lt;span class=&quot;ruby-keyword&quot;&gt;self&lt;/span&gt;, &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;%Y %b %d %H:%M:%S&amp;quot;&lt;/span&gt;)
+  &lt;span class=&quot;ruby-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;rescue&lt;/span&gt;
+  &lt;span class=&quot;ruby-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;method-i-is_LogDate-3F&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;is_LogDate?&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;p&gt;Returns Boolean. Checks if the &lt;code&gt;String&lt;/code&gt; is in the</pre>
+
+<p><code>LogDate</code> format.&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;quot;Nov 01 14:12:10&amp;quot;.is_LogDate?</p>
+
+<h1 id="label-%26gt%3B+true">&amp;gt; true<span><a href="#label-%26gt%3B+true">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+
+<p>&amp;quot;asdf&amp;quot;.is_LogDate?</p>
+
+<h1 id="label-%26gt%3B+false%3C%2Fpre%3E">&amp;gt; false&lt;/pre&gt;<span><a href="#label-%26gt%3B+false%3C%2Fpre%3E">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+
+<pre>&lt;div class=&quot;method-source-code&quot; id=&quot;is_LogDate-3F-source&quot;&gt;
+  &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/logDate.rb, line 28&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier ruby-title”&gt;is_LogDate?&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-keyword&quot;&gt;begin&lt;/span&gt;
+  &lt;span class=&quot;ruby-constant&quot;&gt;DateTime&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;strptime&lt;/span&gt;(&lt;span class=&quot;ruby-keyword&quot;&gt;self&lt;/span&gt;, &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;%b %d %H:%M:%S&amp;quot;&lt;/span&gt;)
+  &lt;span class=&quot;ruby-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;rescue&lt;/span&gt;
+  &lt;span class=&quot;ruby-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;method-i-to_DateTime&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;to_DateTime&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;p&gt;Returns &lt;code&gt;DateTime&lt;/code&gt;. Given a &lt;code&gt;LogDate&lt;/code&gt; or</pre>
+
+<p><code>FullLogDate</code> format string, it  returns a <code>DateTime</code>
+object. In the case of <code>LogDate</code> the year must be guessed. See
+notes on the top.  If the string is not in the <code>LogDate</code> or
+<code>FullLogDate</code> format then it raises the
+<code>NoMethodError</code>.&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;quot;Nov 01 14:12:10&amp;quot;.to_DateTime</p>
+
+<h1 id="label-%26gt%3B+%23%26lt%3BDateTime%3A+2018-11-01T14%3A12%3A10%2B00%3A00+%28%282458424j%2C51130s%2C0n%29%2C%2B0s%2C2299161j%29%26gt%3B%3C%2Fpre%3E">&amp;gt; #&amp;lt;DateTime: 2018-11-01T14:12:10+00:00 ((2458424j,51130s,0n),+0s,2299161j)&amp;gt;&lt;/pre&gt;<span><a href="#label-%26gt%3B+%23%26lt%3BDateTime%3A+2018-11-01T14%3A12%3A10%2B00%3A00+%28%282458424j%2C51130s%2C0n%29%2C%2B0s%2C2299161j%29%26gt%3B%3C%2Fpre%3E">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+
+<pre>&lt;div class=&quot;method-source-code&quot; id=&quot;to_DateTime-source&quot;&gt;
+  &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/logDate.rb, line 58&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier ruby-title”&gt;to_DateTime&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;self&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;is_LogDate?&lt;/span&gt; 
+  &lt;span class=&quot;ruby-identifier&quot;&gt;d0&lt;/span&gt; = &lt;span class=&quot;ruby-constant&quot;&gt;DateTime&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;strptime&lt;/span&gt;(&lt;span class=&quot;ruby-keyword&quot;&gt;self&lt;/span&gt;, &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;%b %d %H:%M:%S&amp;quot;&lt;/span&gt; )
+  &lt;span class=&quot;ruby-identifier&quot;&gt;dNow&lt;/span&gt; = &lt;span class=&quot;ruby-constant&quot;&gt;DateTime&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;now&lt;/span&gt; 
+  &lt;span class=&quot;ruby-identifier&quot;&gt;yearNow&lt;/span&gt; = &lt;span class=&quot;ruby-identifier&quot;&gt;dNow&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;year&lt;/span&gt; 
+  &lt;span class=&quot;ruby-identifier&quot;&gt;dGuess0&lt;/span&gt; = &lt;span class=&quot;ruby-constant&quot;&gt;DateTime&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;new&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;yearNow&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;d0&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;month&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;d0&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;day&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;d0&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;hour&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;d0&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;minute&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;d0&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;second&lt;/span&gt;)
+  &lt;span class=&quot;ruby-identifier&quot;&gt;dGuess1&lt;/span&gt; = &lt;span class=&quot;ruby-constant&quot;&gt;DateTime&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;new&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;yearNow&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;ruby-value&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;d0&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;month&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;d0&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;day&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;d0&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;hour&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;d0&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;minute&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;d0&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;second&lt;/span&gt;)
+  &lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;dGuess0&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;dNow&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;out&lt;/span&gt; = &lt;span class=&quot;ruby-identifier&quot;&gt;dGuess0&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;out&lt;/span&gt; = &lt;span class=&quot;ruby-identifier&quot;&gt;dGuess1&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt; 
+  &lt;span class=&quot;ruby-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;out&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;self&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;is_FullLogDate?&lt;/span&gt;
+  &lt;span class=&quot;ruby-identifier&quot;&gt;d0&lt;/span&gt; = &lt;span class=&quot;ruby-constant&quot;&gt;DateTime&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;strptime&lt;/span&gt;(&lt;span class=&quot;ruby-keyword&quot;&gt;self&lt;/span&gt;, &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;%Y %b %d %H:%M:%S&amp;quot;&lt;/span&gt; )      
+  &lt;span class=&quot;ruby-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;d0&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;ruby-comment&quot;&gt;# if we arrived here the string does not contain a date in a format&lt;/span&gt;
+&lt;span class=&quot;ruby-comment&quot;&gt;# we care about. so we raise an error.&lt;/span&gt;
+&lt;span class=&quot;ruby-identifier&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;ruby-constant&quot;&gt;NoMethodError&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;method-i-to_ElasticDate&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;to_ElasticDate&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;p&gt;Returns &lt;code&gt;String&lt;/code&gt;. Convert to a date format undertandable by</pre>
+
+<p>Elasticsearch/Kibana. i.e.: “2018-11-11T15:24:43”&lt;/p&gt;</p>
+
+<pre>&lt;div class=&quot;method-source-code&quot; id=&quot;to_ElasticDate-source&quot;&gt;
+  &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/logDate.rb, line 110&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier ruby-title”&gt;to_ElasticDate&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;self&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;to_DateTime&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;to_ElasticDate&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;method-i-to_FullLogDate&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;to_FullLogDate&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;p&gt;Returns &lt;code&gt;String&lt;/code&gt;. Given a string in the &lt;code&gt;LogDate&lt;/code&gt; or</pre>
+
+<p><code>FullLogDate</code> format  return a <code>String</code> in the
+<code>FullLogDate</code> format.&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;quot;Nov 01 14:12:10&amp;quot;.to_FullLogDate</p>
+
+<h1 id="label-%26gt%3B+%26quot%3B2018+Nov+01+14%3A12%3A10%26quot%3B%3C%2Fpre%3E">&amp;gt; &amp;quot;2018 Nov 01 14:12:10&amp;quot;&lt;/pre&gt;<span><a href="#label-%26gt%3B+%26quot%3B2018+Nov+01+14%3A12%3A10%26quot%3B%3C%2Fpre%3E">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+
+<pre>&lt;div class=&quot;method-source-code&quot; id=&quot;to_FullLogDate-source&quot;&gt;
+  &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/logDate.rb, line 81&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier ruby-title”&gt;to_FullLogDate&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;self&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;is_LogDate?&lt;/span&gt; 
+  &lt;span class=&quot;ruby-identifier&quot;&gt;d0&lt;/span&gt; = &lt;span class=&quot;ruby-keyword&quot;&gt;self&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;to_DateTime&lt;/span&gt;
+  &lt;span class=&quot;ruby-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;d0&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;strftime&lt;/span&gt;(&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;%Y %b %d %H:%M:%S&amp;quot;&lt;/span&gt;)
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;self&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;is_FullLogDate?&lt;/span&gt;
+  &lt;span class=&quot;ruby-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;self&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;ruby-comment&quot;&gt;# se siamo arrivati qui la stringa non e&amp;#39; nel formato di data da noi riconosciuto&lt;/span&gt;
+&lt;span class=&quot;ruby-comment&quot;&gt;# quindi il metodo non e&amp;#39; valido.&lt;/span&gt;
+&lt;span class=&quot;ruby-identifier&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;ruby-constant&quot;&gt;NoMethodError&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;method-i-to_LogDate&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;to_LogDate&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;p&gt;Returns &lt;code&gt;String&lt;/code&gt;. Given a string in the &lt;code&gt;LogDate&lt;/code&gt; of</pre>
+
+<p><code>FullLogDate</code> format returns a string in the
+<code>LogDate</code> format. For all other strings raises the
+<code>NoMethodError</code>.&lt;/p&gt;</p>
+
+<pre>&lt;div class=&quot;method-source-code&quot; id=&quot;to_LogDate-source&quot;&gt;
+  &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/logDate.rb, line 97&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier ruby-title”&gt;to_LogDate&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;self&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;is_LogDate?&lt;/span&gt; 
+  &lt;span class=&quot;ruby-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;self&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;self&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;is_FullLogDate?&lt;/span&gt;
+  &lt;span class=&quot;ruby-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;self&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;ruby-value&quot;&gt;19&lt;/span&gt;]
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;ruby-comment&quot;&gt;# if we arrived here something went wrong&lt;/span&gt;
+&lt;span class=&quot;ruby-identifier&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;ruby-constant&quot;&gt;NoMethodError&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>        &lt;/div&gt;
+
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+  &lt;/section&gt;
+
+&lt;/section&gt;</pre>
+
+<p>&lt;/main&gt;</p>
+
+<p>&lt;footer id=“validator-badges” role=“contentinfo”&gt;</p>
+
+<pre>&lt;p&gt;&lt;a href=&quot;https://validator.w3.org/check/referer&quot;&gt;Validate&lt;/a&gt;
+&lt;p&gt;Generated by &lt;a href=&quot;https://ruby.github.io/rdoc/&quot;&gt;RDoc&lt;/a&gt; 6.0.1.
+&lt;p&gt;Based on &lt;a href=&quot;http://deveiate.org/projects/Darkfish-RDoc/&quot;&gt;Darkfish&lt;/a&gt; by &lt;a href=&quot;http://deveiate.org&quot;&gt;Michael Granger&lt;/a&gt;.</pre>
+
+<p>&lt;/footer&gt;</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

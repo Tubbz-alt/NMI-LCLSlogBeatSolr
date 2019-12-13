@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class LogWalker - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/logWalker.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Object.html">Object</a>
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-allFiles">#allFiles</a>
+    
+    <li ><a href="#method-i-logFiles">#logFiles</a>
+    
+    <li ><a href="#method-i-rot1Files">#rot1Files</a>
+    
+    <li ><a href="#method-i-rotCompressedFiles">#rotCompressedFiles</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./RCS/LCLS-LogBeat3_rb,v.html">LCLS-LogBeat3.rb,v</a>
+  
+    <li class="file"><a href="./RCS/logLine_rb,v.html">logLine.rb,v</a>
+  
+    <li class="file"><a href="./README.html">README</a>
+  
+    <li class="file"><a href="./doc/DateTime_html.html">DateTime.html</a>
+  
+    <li class="file"><a href="./doc/ElasticTalk_html.html">ElasticTalk.html</a>
+  
+    <li class="file"><a href="./doc/IO_html.html">IO.html</a>
+  
+    <li class="file"><a href="./doc/LogLine_html.html">LogLine.html</a>
+  
+    <li class="file"><a href="./doc/LogWalker_html.html">LogWalker.html</a>
+  
+    <li class="file"><a href="./doc/Object_html.html">Object.html</a>
+  
+    <li class="file"><a href="./doc/RCS/LCLS-LogBeat3_rb,v_html.html">LCLS-LogBeat3_rb,v.html</a>
+  
+    <li class="file"><a href="./doc/RCS/logLine_rb,v_html.html">logLine_rb,v.html</a>
+  
+    <li class="file"><a href="./doc/README_html.html">README.html</a>
+  
+    <li class="file"><a href="./doc/String_html.html">String.html</a>
+  
+    <li class="file"><a href="./doc/Tailer_html.html">Tailer.html</a>
+  
+    <li class="file"><a href="./doc/Warbler_html.html">Warbler.html</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./doc/css/fonts_css.html">fonts.css</a>
+  
+    <li class="file"><a href="./doc/css/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="./doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="./doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="./doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="./doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="./doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="./doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="./doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="./doc/makeDoc_sh_html.html">makeDoc_sh.html</a>
+  
+    <li class="file"><a href="./doc/makeJar_sh_html.html">makeJar_sh.html</a>
+  
+    <li class="file"><a href="./doc/old/logToElasticSenderRunner_sh_html.html">logToElasticSenderRunner_sh.html</a>
+  
+    <li class="file"><a href="./doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li class="file"><a href="./lib/RCS/tailer_rb,v.html">tailer.rb,v</a>
+  
+    <li class="file"><a href="./makeDoc_sh.html">makeDoc.sh</a>
+  
+    <li class="file"><a href="./makeJar_sh.html">makeJar.sh</a>
+  
+    <li class="file"><a href="./old/logToElasticSenderRunner_sh.html">logToElasticSenderRunner.sh</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./DateTime.html">DateTime</a>
+  
+    <li><a href="./ElasticTalk.html">ElasticTalk</a>
+  
+    <li><a href="./LogLine.html">LogLine</a>
+  
+    <li><a href="./LogWalker.html">LogWalker</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./String.html">String</a>
+  
+    <li><a href="./Tailer.html">Tailer</a>
+  
+    <li><a href="./Warbler.html">Warbler</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class LogWalker</h1>
+
+  <div id="description" class="description">
+    
+<p>The class <code>LogWalker</code> abstracts the most common access
+procedures to visit the log files.</p>
+
+<p>The class is tailored over <code>psmetric01</code> case where  a single
+directory contains many machines logs.</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-basePath" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">basePath</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>Return <code>String</code>. Return the base node path under wich all  log
+files are contained.</p>
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(path)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>It is supposed the logfiles live under a common directory node.  Here
+<code>path</code> is a <code>String</code> and must be the full path name
+of such directory.</p>
+
+<pre class="ruby"><span class="ruby-identifier">sto</span> = <span class="ruby-constant">LogWalker</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;/mnt/lcls-logs&quot;</span>)
+ =<span class="ruby-operator">&gt;</span> <span class="ruby-comment">#&lt;LogWalker:0x00000008062a1418 @basePath=&quot;/mnt/lcls-logs&quot;&gt;</span>
+ <span class="ruby-identifier">sto</span>.<span class="ruby-identifier">basePath</span>
+ =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;/mnt/lcls-logs&quot;</span>
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/logWalker.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">path</span>) 
+  <span class="ruby-comment"># toglie l&#39;ultimo &quot;/&quot; da path se presente</span>
+  <span class="ruby-identifier">tmp</span> = <span class="ruby-identifier">path</span>.<span class="ruby-identifier">sub</span> <span class="ruby-regexp">/\/$/</span>, <span class="ruby-string">&quot;&quot;</span> 
+  <span class="ruby-identifier">fail</span> <span class="ruby-node">&quot;Error, &#39;#{path}&#39; is not a directory.&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span> <span class="ruby-identifier">tmp</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-node">&quot;Error, &#39;#{path}&#39; directory is empty.&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-identifier">tmp</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/*&quot;</span>).<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@basePath</span> = <span class="ruby-identifier">tmp</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-allFiles" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">allFiles</span><span
+            class="method-args">() { |tmp| ... }</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Return <code>Enumerator</code>. The returned enumerator goes through all
+<strong>files</strong></p>
+
+<p>contained below <code>basePath</code> node. Directories are not files so
+they are  not listed.</p>
+
+<pre class="ruby"><span class="ruby-identifier">sto</span>.<span class="ruby-identifier">allFiles</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-comment">#&lt;Enumerator: ...&gt;</span>
+<span class="ruby-identifier">sto</span>.<span class="ruby-identifier">allFiles</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">puts</span> <span class="ruby-identifier">x</span>; }  
+=<span class="ruby-operator">&gt;</span> [<span class="ruby-string">&quot;/mnt/lcls-logs/psana101/crond.log&quot;</span>,
+   <span class="ruby-string">&quot;/mnt/lcls-logs/psana101/crond.log-20180304.gz&quot;</span>,
+    <span class="ruby-string">&quot;/mnt/lcls-logs/psana101/crond.log-20180311.gz&quot;</span>,
+    <span class="ruby-operator">...</span>. ]
+<span class="ruby-identifier">sto</span>.<span class="ruby-identifier">allFiles</span>.<span class="ruby-identifier">first</span>(<span class="ruby-value">2</span>)
+=<span class="ruby-operator">&gt;</span> [<span class="ruby-string">&quot;/mnt/lcls-logs/psana101/crond.log&quot;</span>,
+    <span class="ruby-string">&quot;/mnt/lcls-logs/psana101/crond.log-20180304.gz&quot;</span>]
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="allFiles-source">
+            <pre><span class="ruby-comment"># File lib/logWalker.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">allFiles</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span> 
+    <span class="ruby-identifier">all</span> = <span class="ruby-constant">Find</span>.<span class="ruby-identifier">find</span>( <span class="ruby-ivar">@basePath</span> ) 
+    <span class="ruby-keyword">while</span> <span class="ruby-keyword">true</span> 
+      <span class="ruby-keyword">begin</span> 
+        <span class="ruby-identifier">tmp</span> = <span class="ruby-identifier">all</span>.<span class="ruby-identifier">next</span>
+      <span class="ruby-keyword">rescue</span> <span class="ruby-constant">StopIteration</span> 
+        <span class="ruby-keyword">break</span> 
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-identifier">tmp</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">file?</span> <span class="ruby-identifier">tmp</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span> 
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">to_enum</span>(<span class="ruby-value">:allFiles</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- allFiles-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- allFiles-method -->
+
+    
+      <div id="method-i-logFiles" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">logFiles</span><span
+            class="method-args">() { |tmp| ... }</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Return <code>Enumerator</code>. Return all files that can be considere log
+files.  In our setup, these are all files who do <strong>not</strong>
+contain a <strong>date</strong> in the pathname.</p>
+
+<pre class="ruby"><span class="ruby-identifier">sto</span>.<span class="ruby-identifier">logFiles</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-comment">#&lt;Enumerator: ...&gt;</span>
+<span class="ruby-identifier">sto</span>.<span class="ruby-identifier">logFiles</span>.<span class="ruby-identifier">first</span>(<span class="ruby-value">3</span>)
+=<span class="ruby-operator">&gt;</span> [<span class="ruby-string">&quot;/mnt/lcls-logs/psana101/crond.log&quot;</span>,
+<span class="ruby-string">&quot;/mnt/lcls-logs/psana101/dbus-daemon.log&quot;</span>,
+<span class="ruby-string">&quot;/mnt/lcls-logs/psana101/dbus.log&quot;</span>]
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="logFiles-source">
+            <pre><span class="ruby-comment"># File lib/logWalker.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">logFiles</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span> 
+    <span class="ruby-identifier">all</span> = <span class="ruby-constant">Find</span>.<span class="ruby-identifier">find</span>( <span class="ruby-ivar">@basePath</span> ) 
+    <span class="ruby-keyword">while</span> <span class="ruby-keyword">true</span> 
+      <span class="ruby-keyword">begin</span> 
+        <span class="ruby-comment"># prendi il prossimo elemento trovato da Find.</span>
+        <span class="ruby-identifier">tmp</span> = <span class="ruby-identifier">all</span>.<span class="ruby-identifier">next</span>
+        <span class="ruby-comment"># salta l&#39;elemento se non e&#39; un file </span>
+        <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">file?</span> <span class="ruby-identifier">tmp</span> 
+        <span class="ruby-comment"># salta l&#39;elemento se ha una data nel path e.g. &quot;crond.log-20180304.gz&quot;</span>
+        <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">tmp</span>.<span class="ruby-identifier">match</span> <span class="ruby-regexp">/-\d{8}/</span> 
+      <span class="ruby-keyword">rescue</span> <span class="ruby-constant">StopIteration</span> 
+        <span class="ruby-keyword">break</span> 
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-identifier">tmp</span> 
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span> 
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">to_enum</span>(<span class="ruby-value">:logFiles</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- logFiles-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- logFiles-method -->
+
+    
+      <div id="method-i-rot1Files" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">rot1Files</span><span
+            class="method-args">() { |tmp| ... }</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Return <code>Enumerator</code>. Return all log files that have been rotated
+exactly one time. There files in out setup are all the one that have a date
+but are not compressed.</p>
+
+<p>It is useful to be able to spot these files because when a log file is
+empty</p>
+
+<p>we will look at the last logline in the rot1 file. The rot1 file can not be
+empty by construction. Indeed, according to our current
+<code>logrotate.conf</code> in <code>psmetric01</code>, files are rotated
+only  if they contain at least 100k, therefore the rotated file can not be
+empty.</p>
+
+<pre class="ruby"><span class="ruby-identifier">sto</span>.<span class="ruby-identifier">rot1Files</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-comment">#&lt;Enumerator: ...&gt;</span>
+<span class="ruby-identifier">sto</span>.<span class="ruby-identifier">rot1Files</span>.<span class="ruby-identifier">first</span>(<span class="ruby-value">3</span>)
+=<span class="ruby-operator">&gt;</span> [<span class="ruby-string">&quot;/mnt/lcls-logs/psana101/messages-20181028&quot;</span>,
+    <span class="ruby-string">&quot;/mnt/lcls-logs/psana101/secure-20181028&quot;</span>]
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="rot1Files-source">
+            <pre><span class="ruby-comment"># File lib/logWalker.rb, line 104</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rot1Files</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span> 
+    <span class="ruby-identifier">all</span> = <span class="ruby-constant">Find</span>.<span class="ruby-identifier">find</span>( <span class="ruby-ivar">@basePath</span> ) 
+    <span class="ruby-keyword">while</span> <span class="ruby-keyword">true</span> 
+      <span class="ruby-keyword">begin</span> 
+        <span class="ruby-comment"># prendi il prossimo elemento trovato da Find.</span>
+        <span class="ruby-identifier">tmp</span> = <span class="ruby-identifier">all</span>.<span class="ruby-identifier">next</span>
+        <span class="ruby-comment"># salta l&#39;elemento se non e&#39; un file </span>
+        <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">file?</span> <span class="ruby-identifier">tmp</span> 
+        <span class="ruby-comment"># salta l&#39;elemento se NON ha una data nel path e.g. &quot;crond.log&quot;</span>
+        <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">tmp</span>.<span class="ruby-identifier">match</span> <span class="ruby-regexp">/-\d{8}/</span> 
+        <span class="ruby-comment"># salta l&#39;elemento se termina con &quot;.gz&quot;</span>
+        <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">tmp</span>.<span class="ruby-identifier">match</span> <span class="ruby-regexp">/\.gz$/</span>
+      <span class="ruby-keyword">rescue</span> <span class="ruby-constant">StopIteration</span> 
+        <span class="ruby-keyword">break</span> 
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-identifier">tmp</span> 
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span> 
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">to_enum</span>(<span class="ruby-value">:rot1Files</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- rot1Files-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- rot1Files-method -->
+
+    
+      <div id="method-i-rotCompressedFiles" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">rotCompressedFiles</span><span
+            class="method-args">() { |tmp| ... }</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Return <code>Enumerator</code>. Return all files that can be considered
+compressed log files. Those are files that have been rotated more than
+once. In our setup they are  all files wich have a date in the pathname and
+are compressed, their pathname end with “.gz”.</p>
+
+<pre class="ruby"><span class="ruby-identifier">sto</span>.<span class="ruby-identifier">rotCompressedFiles</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-comment">#&lt;Enumerator: ...&gt;</span>
+<span class="ruby-identifier">sto</span>.<span class="ruby-identifier">rotCompressedFiles</span>.<span class="ruby-identifier">first</span>(<span class="ruby-value">3</span>)
+=<span class="ruby-operator">&gt;</span> [<span class="ruby-string">&quot;/mnt/lcls-logs/psana101/crond.log-20180304.gz&quot;</span>,
+<span class="ruby-string">&quot;/mnt/lcls-logs/psana101/crond.log-20180311.gz&quot;</span>,
+<span class="ruby-string">&quot;/mnt/lcls-logs/psana101/crond.log-20180319.gz&quot;</span>]
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="rotCompressedFiles-source">
+            <pre><span class="ruby-comment"># File lib/logWalker.rb, line 137</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rotCompressedFiles</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span> 
+    <span class="ruby-identifier">all</span> = <span class="ruby-constant">Find</span>.<span class="ruby-identifier">find</span>( <span class="ruby-ivar">@basePath</span> ) 
+    <span class="ruby-keyword">while</span> <span class="ruby-keyword">true</span> 
+      <span class="ruby-keyword">begin</span> 
+        <span class="ruby-comment"># prendi il prossimo elemento trovato da Find.</span>
+        <span class="ruby-identifier">tmp</span> = <span class="ruby-identifier">all</span>.<span class="ruby-identifier">next</span>
+        <span class="ruby-comment"># salta l&#39;elemento se non e&#39; un file </span>
+        <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">file?</span> <span class="ruby-identifier">tmp</span> 
+        <span class="ruby-comment"># salta l&#39;elemento se NON ha una data nel path e.g. &quot;crond.log&quot;</span>
+        <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">tmp</span>.<span class="ruby-identifier">match</span> <span class="ruby-regexp">/-\d{8}/</span> 
+        <span class="ruby-comment"># salta l&#39;elemento se NON termina con &quot;.gz&quot;</span>
+        <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span>  <span class="ruby-identifier">tmp</span>.<span class="ruby-identifier">match</span> <span class="ruby-regexp">/\.gz$/</span>
+      <span class="ruby-keyword">rescue</span> <span class="ruby-constant">StopIteration</span> 
+        <span class="ruby-keyword">break</span> 
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-identifier">tmp</span> 
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span> 
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">to_enum</span>(<span class="ruby-value">:rotCompressedFiles</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- rotCompressedFiles-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- rotCompressedFiles-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

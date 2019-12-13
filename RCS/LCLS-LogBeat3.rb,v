@@ -1,0 +1,129 @@
+head	1.3;
+access;
+symbols;
+locks
+	nmingott:1.3; strict;
+comment	@# @;
+
+
+1.3
+date	2018.11.16.02.11.19;	author nmingott;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2018.11.15.19.04.06;	author nmingott;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2018.11.15.18.49.38;	author nmingott;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@Summary: ok
+@
+text
+@#!/opt/rh/rh-ruby25/root/usr/bin/ruby 
+
+require "file-tail"
+require "json"
+require "pry"
+require_relative "logWalker"
+require_relative "elasticTalk"
+require_relative "logLine"
+
+# require_relative "logDate"
+
+# oggetto ElastiTalk che serve per comunicare con Elasticsearch
+et = ElasticTalk.new("localhost","9200")
+fail "Error, Elasticsearch is not reachable" if not et.is_elasticReachable?
+
+# oggetto LogWalker che serve per trovare i logfiles 
+lw = LogWalker.new("/u2/logs")
+
+# lista di tutti i logfiles 
+allLogFiles = lw.logFiles.to_a; nil 
+
+# costruisce lista di tutti i tailable files 
+# una "tailable" file e' un file su cui si puo' 
+# chiamare il metodo "tail"
+tailableFiles = []
+allLogFiles.each do |path|
+  f = File.open(path)
+  f.extend(File::Tail)
+  f.return_if_eof = true
+  # discharge previous content of each file 
+  # f.tail ; nil   
+  # go to the end of file 
+  f.seek(0, IO::SEEK_END)
+  tailableFiles.push(f)
+end; nil 
+
+while true do 
+  # lista that contains all Logs (in form of Ruby Hashes) to be sent
+  # in batch to Elasticsearch
+  rubyLineDizBuffer = []
+  # elaborate each tailFile (that is all logFiles)
+  tailableFiles.each do |tf|
+    # parse each new line in a logfile and put it into a buffer called "rubyLineDizBuffer"
+    tf.tail.each do|line| 
+      # to avoid problem with non UTF-8 charactres while parsing 
+      # further problems may happen in "tail-file" looking for newlines.
+      safeLine = line.encode!('UTF-8', :invalid => :replace)
+      ll = LogLine.new(safeLine)
+      rubyLineDiz = ll.parse
+      # add the filename, cause it is not included in loglines
+      rubyLineDiz["file"] = File.basename(tf)
+      rubyLineDizBuffer.push(rubyLineDiz)
+    end
+  end 
+  # se non ci sono dati salta il resto, aspetta un po e rifai
+  if rubyLineDizBuffer.length == 0 
+    sleep 1
+    next
+  end
+  
+  # puts rubyLineDizBuffer
+  numLogs, batchBytes, res = et.postLogBatch(index="lclslogs-test", type="log", 
+                                             rubyLineDizBuffer, fake: false)
+  errors = JSON.parse(res.body)['errors']
+  loggerLine =  "numLogs: #{numLogs}, batchBytes: #{batchBytes}, errors: #{errors}"
+  # -- not work as expected
+  # system("logger -f /var/log/elasticSent.log 'BatchToElastic: #{loggerLine}  '")
+  system("logger 'BatchToElastic: #{loggerLine}  '")
+
+  # binding.pry
+  # puts 
+  sleep 1
+end 
+@
+
+
+1.2
+log
+@Summary: added unicode stuff
+@
+text
+@d66 2
+a68 1
+
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d45 4
+a48 1
+      ll = LogLine.new(line)
+@

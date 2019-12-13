@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class ElasticTalk - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/elasticTalk.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Object.html">Object</a>
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-getElasticDescription">#getElasticDescription</a>
+    
+    <li ><a href="#method-i-is_elasticReachable-3F">#is_elasticReachable?</a>
+    
+    <li ><a href="#method-i-postLogAsJSON">#postLogAsJSON</a>
+    
+    <li ><a href="#method-i-postLogAsRubyHash">#postLogAsRubyHash</a>
+    
+    <li ><a href="#method-i-postLogBatch">#postLogBatch</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./RCS/LCLS-LogBeat3_rb,v.html">LCLS-LogBeat3.rb,v</a>
+  
+    <li class="file"><a href="./RCS/logLine_rb,v.html">logLine.rb,v</a>
+  
+    <li class="file"><a href="./README.html">README</a>
+  
+    <li class="file"><a href="./doc/DateTime_html.html">DateTime.html</a>
+  
+    <li class="file"><a href="./doc/ElasticTalk_html.html">ElasticTalk.html</a>
+  
+    <li class="file"><a href="./doc/IO_html.html">IO.html</a>
+  
+    <li class="file"><a href="./doc/LogLine_html.html">LogLine.html</a>
+  
+    <li class="file"><a href="./doc/LogWalker_html.html">LogWalker.html</a>
+  
+    <li class="file"><a href="./doc/Object_html.html">Object.html</a>
+  
+    <li class="file"><a href="./doc/RCS/LCLS-LogBeat3_rb,v_html.html">LCLS-LogBeat3_rb,v.html</a>
+  
+    <li class="file"><a href="./doc/RCS/logLine_rb,v_html.html">logLine_rb,v.html</a>
+  
+    <li class="file"><a href="./doc/README_html.html">README.html</a>
+  
+    <li class="file"><a href="./doc/String_html.html">String.html</a>
+  
+    <li class="file"><a href="./doc/Tailer_html.html">Tailer.html</a>
+  
+    <li class="file"><a href="./doc/Warbler_html.html">Warbler.html</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./doc/css/fonts_css.html">fonts.css</a>
+  
+    <li class="file"><a href="./doc/css/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="./doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="./doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="./doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="./doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="./doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="./doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="./doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="./doc/makeDoc_sh_html.html">makeDoc_sh.html</a>
+  
+    <li class="file"><a href="./doc/makeJar_sh_html.html">makeJar_sh.html</a>
+  
+    <li class="file"><a href="./doc/old/logToElasticSenderRunner_sh_html.html">logToElasticSenderRunner_sh.html</a>
+  
+    <li class="file"><a href="./doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li class="file"><a href="./lib/RCS/tailer_rb,v.html">tailer.rb,v</a>
+  
+    <li class="file"><a href="./makeDoc_sh.html">makeDoc.sh</a>
+  
+    <li class="file"><a href="./makeJar_sh.html">makeJar.sh</a>
+  
+    <li class="file"><a href="./old/logToElasticSenderRunner_sh.html">logToElasticSenderRunner.sh</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./DateTime.html">DateTime</a>
+  
+    <li><a href="./ElasticTalk.html">ElasticTalk</a>
+  
+    <li><a href="./LogLine.html">LogLine</a>
+  
+    <li><a href="./LogWalker.html">LogWalker</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./String.html">String</a>
+  
+    <li><a href="./Tailer.html">Tailer</a>
+  
+    <li><a href="./Warbler.html">Warbler</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class ElasticTalk</h1>
+
+  <div id="description" class="description">
+    
+<p>Class to abstract the comunication with <strong>Elasticsearch</strong>.</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-host" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">host</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-port" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">port</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(host="localhost", port="9200")</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/elasticTalk.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">host</span>=<span class="ruby-string">&quot;localhost&quot;</span>, <span class="ruby-identifier">port</span>=<span class="ruby-string">&quot;9200&quot;</span>)
+  <span class="ruby-ivar">@host</span> = <span class="ruby-identifier">host</span>
+  <span class="ruby-ivar">@port</span> = <span class="ruby-identifier">port</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-getElasticDescription" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getElasticDescription</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Return <code>String</code>. If there is an errore returns nil.  TODO:
+Execeptions. Gives a back a string giving some details on the Elastisearch 
+server.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="getElasticDescription-source">
+            <pre><span class="ruby-comment"># File lib/elasticTalk.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getElasticDescription</span>
+  <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-node">&quot;http://#{@host}:#{@port}&quot;</span>)
+  <span class="ruby-identifier">out</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">get_response</span>(<span class="ruby-identifier">uri</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">out</span>.<span class="ruby-identifier">code</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">==</span> <span class="ruby-value">200</span> 
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">out</span>.<span class="ruby-identifier">body</span>
+  <span class="ruby-keyword">else</span> 
+    <span class="ruby-constant">STDERR</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Error reachin Elasticsearch: &quot;</span> <span class="ruby-operator">+</span> 
+                <span class="ruby-node">&quot;#{out.header.code} -- #{out.header.message}&quot;</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>    
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getElasticDescription-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getElasticDescription-method -->
+
+    
+      <div id="method-i-is_elasticReachable-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">is_elasticReachable?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Return <code>Object</code>.  Equivalent to “ssh -L 9200:localhost:9200
+p@elavi”</p>
+
+<p>def ElasticTalk.openElaviTunnel</p>
+
+<pre>out = &quot;</pre>
+
+<p>end</p>
+
+<p>Returns <code>Truth</code> value. Il Elastic search is reachable returns
+<code>true</code>. Otherwise <code>false</code>. Catches exceptions, always
+returns the truth value. Roughly equivalent to this shell command.</p>
+
+<pre>$&gt; curl &#39;http://#{@host}:#{@port}&#39;</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="is_elasticReachable-3F-source">
+            <pre><span class="ruby-comment"># File lib/elasticTalk.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">is_elasticReachable?</span>
+  <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-node">&quot;http://#{@host}:#{@port}&quot;</span>)
+  <span class="ruby-identifier">out</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">get_response</span>(<span class="ruby-identifier">uri</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">out</span>.<span class="ruby-identifier">code</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">==</span> <span class="ruby-value">200</span> 
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">else</span> 
+    <span class="ruby-constant">STDERR</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Error reaching Elasticsearch: &quot;</span> <span class="ruby-operator">+</span> 
+                <span class="ruby-node">&quot;#{out.header.code} -- #{out.header.message}&quot;</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> 
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># questo ci pretegge da eventuali eccezioni. </span>
+<span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ex</span> 
+  <span class="ruby-constant">STDERR</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">ex</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- is_elasticReachable-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- is_elasticReachable-3F-method -->
+
+    
+      <div id="method-i-postLogAsJSON" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">postLogAsJSON</span><span
+            class="method-args">(index="lclslogs-test", type="log", jsonStr, bulk: false)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Return <code>...</code>. Insert a single document into Elasticsearch using
+POST. With this method of insertion the document “ID” is auto-generated by
+Elasticsearch. Example</p>
+
+<pre>jd = &#39;{&quot;date&quot;:&quot;2018 Nov 10 20:00:00&quot;, &quot;machine&quot;:&quot;foo&quot;, 
+       &quot;service&quot;:&quot;bar&quot;, &quot;message&quot;:&quot;hello world&quot;}&#39;
+ec.postLog(&quot;lclslogs-test&quot;, &quot;log&quot;, )</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="postLogAsJSON-source">
+            <pre><span class="ruby-comment"># File lib/elasticTalk.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">postLogAsJSON</span>(<span class="ruby-identifier">index</span>=<span class="ruby-string">&quot;lclslogs-test&quot;</span>, <span class="ruby-identifier">type</span>=<span class="ruby-string">&quot;log&quot;</span>, <span class="ruby-identifier">jsonStr</span>, <span class="ruby-identifier">bulk</span><span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">bulk</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span> 
+    <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-node">&quot;http://#{@host}:#{@port}/#{index}/#{type}/_bulk&quot;</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-node">&quot;http://#{@host}:#{@port}/#{index}/#{type}/&quot;</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">http</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">host</span>, <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">port</span>)
+  <span class="ruby-identifier">req</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span><span class="ruby-operator">::</span><span class="ruby-constant">Post</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;Content-Type&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;application/json&#39;</span>)
+  <span class="ruby-identifier">req</span>.<span class="ruby-identifier">body</span> = <span class="ruby-identifier">jsonStr</span>
+  <span class="ruby-identifier">res</span> = <span class="ruby-identifier">http</span>.<span class="ruby-identifier">request</span>(<span class="ruby-identifier">req</span>)
+  <span class="ruby-comment"># puts &quot;response: #{res.body}&quot;</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">res</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- postLogAsJSON-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- postLogAsJSON-method -->
+
+    
+      <div id="method-i-postLogAsRubyHash" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">postLogAsRubyHash</span><span
+            class="method-args">(index="lclslogs-test", type="log", diz)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Example</p>
+
+<pre>d = {date: &quot;2018 Nov 10 22:48:00&quot;, machine: &quot;foo&quot;, 
+     service: &quot;bar&quot;, message: &quot;hello 2&quot;} 
+et.postLogAsRubyHash(d)</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="postLogAsRubyHash-source">
+            <pre><span class="ruby-comment"># File lib/elasticTalk.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">postLogAsRubyHash</span>(<span class="ruby-identifier">index</span>=<span class="ruby-string">&quot;lclslogs-test&quot;</span>, <span class="ruby-identifier">type</span>=<span class="ruby-string">&quot;log&quot;</span>, <span class="ruby-identifier">diz</span>)
+  <span class="ruby-identifier">postLogAsJSON</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">diz</span>.<span class="ruby-identifier">to_json</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- postLogAsRubyHash-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- postLogAsRubyHash-method -->
+
+    
+      <div id="method-i-postLogBatch" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">postLogBatch</span><span
+            class="method-args">(index="lclslogs-test", type="log", list, fake: false)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Sends a list of Ruby <code>Hash</code> objects to Elasticsearch in bluk.</p>
+
+<p>Returns: [sizeInByteOfThePayloadSend, responseObjectFromElasticSearch]. if
+<code>:fake</code> is <code>true</code> returns <code>nil</code>.</p>
+
+<p>Conversion to JSON is automatic. Conversion to the BULK format for
+Elasticsearch is automatic.</p>
+
+<p>If &#39;fake&#39; is <code>true</code> then the JSON payload is
+<strong>not</strong> sent to Elasticseach  but printed to
+<code>STDOUT</code>.</p>
+
+<p>Example</p>
+
+<pre>d1 = {date: &quot;2018 11 Nov 11:32:00&quot;, machine: &quot;foo&quot;, service: &quot;bar&quot;, message: &quot;hello Sunday&quot;}
+d2 = {date: &quot;2018 11 Nov 11:33:00&quot;, machine: &quot;foo&quot;, service: &quot;bar&quot;, message: &quot;hello Sunday 2&quot;}
+d3 = {date: &quot;2018 11 Nov 11:34:00&quot;, machine: &quot;foo&quot;, service: &quot;bar&quot;, message: &quot;hello Sunday 3&quot;}
+l = [d1, d2, d3]
+et.postLogBatch(l, fake: true)
+et.postLogBatch(l)</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="postLogBatch-source">
+            <pre><span class="ruby-comment"># File lib/elasticTalk.rb, line 111</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">postLogBatch</span>(<span class="ruby-identifier">index</span>=<span class="ruby-string">&quot;lclslogs-test&quot;</span>, <span class="ruby-identifier">type</span>=<span class="ruby-string">&quot;log&quot;</span>, <span class="ruby-identifier">list</span>, <span class="ruby-identifier">fake</span><span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>)
+  <span class="ruby-comment"># controlla che &quot;list&quot; sia un array</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">list</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Array</span> 
+    <span class="ruby-identifier">fail</span> <span class="ruby-node">&quot;Error, &#39;list&#39; must be an array, it is: #{list}.&quot;</span>      
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># se la lista e&#39; vuota esci</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">list</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+  <span class="ruby-comment"># controlla che ogni elementi di &#39;list&#39; sia un Hash</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">list</span>.<span class="ruby-identifier">all?</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Hash</span>} 
+    <span class="ruby-identifier">fail</span> <span class="ruby-string">&quot;Error, each element of &#39;list&#39; must be an Hash.&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># costruisce la stringa JSON da inviare</span>
+  <span class="ruby-identifier">outJ</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-identifier">list</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">diz</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">tmp</span> = <span class="ruby-string">%Q[ {&quot;index&quot;:{}} \n ]</span>
+    <span class="ruby-identifier">tmp</span> = <span class="ruby-identifier">tmp</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">diz</span>.<span class="ruby-identifier">to_json</span> 
+    <span class="ruby-identifier">outJ</span> = <span class="ruby-identifier">outJ</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">tmp</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">fake</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span> 
+    <span class="ruby-comment"># puts outJ[1..200] + &quot;...&quot; </span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> 
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">res</span> = <span class="ruby-identifier">postLogAsJSON</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">outJ</span>, <span class="ruby-identifier">bulk</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>)      
+    <span class="ruby-comment"># outTmp = res.body[1..100].dup</span>
+    <span class="ruby-comment"># res.clear</span>
+    <span class="ruby-keyword">return</span> [<span class="ruby-identifier">list</span>.<span class="ruby-identifier">length</span>, <span class="ruby-identifier">outJ</span>.<span class="ruby-identifier">size</span>, <span class="ruby-identifier">res</span>]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- postLogBatch-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- postLogBatch-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

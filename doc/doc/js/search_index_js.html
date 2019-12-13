@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>search_index.js - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../../RCS/LCLS-LogBeat3_rb,v.html">LCLS-LogBeat3.rb,v</a>
+  
+    <li class="file"><a href="../../RCS/logLine_rb,v.html">logLine.rb,v</a>
+  
+    <li class="file"><a href="../../README.html">README</a>
+  
+    <li class="file"><a href="../../doc/DateTime_html.html">DateTime.html</a>
+  
+    <li class="file"><a href="../../doc/ElasticTalk_html.html">ElasticTalk.html</a>
+  
+    <li class="file"><a href="../../doc/IO_html.html">IO.html</a>
+  
+    <li class="file"><a href="../../doc/LogLine_html.html">LogLine.html</a>
+  
+    <li class="file"><a href="../../doc/LogWalker_html.html">LogWalker.html</a>
+  
+    <li class="file"><a href="../../doc/Object_html.html">Object.html</a>
+  
+    <li class="file"><a href="../../doc/RCS/LCLS-LogBeat3_rb,v_html.html">LCLS-LogBeat3_rb,v.html</a>
+  
+    <li class="file"><a href="../../doc/RCS/logLine_rb,v_html.html">logLine_rb,v.html</a>
+  
+    <li class="file"><a href="../../doc/README_html.html">README.html</a>
+  
+    <li class="file"><a href="../../doc/String_html.html">String.html</a>
+  
+    <li class="file"><a href="../../doc/Tailer_html.html">Tailer.html</a>
+  
+    <li class="file"><a href="../../doc/Warbler_html.html">Warbler.html</a>
+  
+    <li class="file"><a href="../../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../../doc/css/fonts_css.html">fonts.css</a>
+  
+    <li class="file"><a href="../../doc/css/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="../../doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="../../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="../../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="../../doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="../../doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="../../doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="../../doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="../../doc/makeDoc_sh_html.html">makeDoc_sh.html</a>
+  
+    <li class="file"><a href="../../doc/makeJar_sh_html.html">makeJar_sh.html</a>
+  
+    <li class="file"><a href="../../doc/old/logToElasticSenderRunner_sh_html.html">logToElasticSenderRunner_sh.html</a>
+  
+    <li class="file"><a href="../../doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li class="file"><a href="../../lib/RCS/tailer_rb,v.html">tailer.rb,v</a>
+  
+    <li class="file"><a href="../../makeDoc_sh.html">makeDoc.sh</a>
+  
+    <li class="file"><a href="../../makeJar_sh.html">makeJar.sh</a>
+  
+    <li class="file"><a href="../../old/logToElasticSenderRunner_sh.html">logToElasticSenderRunner.sh</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../DateTime.html">DateTime</a>
+  
+    <li><a href="../../ElasticTalk.html">ElasticTalk</a>
+  
+    <li><a href="../../LogLine.html">LogLine</a>
+  
+    <li><a href="../../LogWalker.html">LogWalker</a>
+  
+    <li><a href="../../Object.html">Object</a>
+  
+    <li><a href="../../String.html">String</a>
+  
+    <li><a href="../../Tailer.html">Tailer</a>
+  
+    <li><a href="../../Warbler.html">Warbler</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<p>var search_data = {“index”:{“<a
+href="http://"datetime","elastictalk","logline","logwalker","object","string","tailer","warbler","allfiles()","close()","getdatestr()","getdatetime()","getelasticdescription()","getfulllogdate()","getlines()","getlogdate()","hasdate?()","is_fulllogdate?()","is_logdate?()","is_elasticreachable?()","logfiles()","new()","new()","new()","new()","parse()","postlogasjson()","postlogasrubyhash()","postlogbatch()","rot1files()","rotcompressedfiles()","to_datetime()","to_elasticdate()","to_elasticdate()","to_fulllogdate()","to_fulllogdate()","to_logdate()","to_logdate()","lcls-logbeat3.rb,v","logline.rb,v","readme","makedoc.sh","makejar.sh","logtoelasticsenderrunner.sh"">searchIndex”:</a>,“<a
+href=""datetime","elastictalk","logline","logwalker","object","string","tailer","warbler","logwalker#allfiles()","tailer#close()","logline#getdatestr()","logline#getdatetime()","elastictalk#getelasticdescription()","logline#getfulllogdate()","tailer#getlines()","logline#getlogdate()","logline#hasdate?()","string#is_fulllogdate?()","string#is_logdate?()","elastictalk#is_elasticreachable?()","logwalker#logfiles()","elastictalk::new()","logline::new()","logwalker::new()","tailer::new()","logline#parse()","elastictalk#postlogasjson()","elastictalk#postlogasrubyhash()","elastictalk#postlogbatch()","logwalker#rot1files()","logwalker#rotcompressedfiles()","string#to_datetime()","datetime#to_elasticdate()","string#to_elasticdate()","datetime#to_fulllogdate()","string#to_fulllogdate()","datetime#to_logdate()","string#to_logdate()","","","","","",""">longSearchIndex”:</a>,“info”:[[“DateTime”,“”,“DateTime.html”,“”,“&lt;p&gt;We
+overload the class <code>DateTime</code> with two methods to get thenstring
+representation of the date object
+…n”],[“ElasticTalk”,“”,“ElasticTalk.html”,“”,“&lt;p&gt;Class to abstract
+the comunication with
+&lt;strong&gt;Elasticsearch&lt;/strong&gt;.n”],[“LogLine”,“”,“LogLine.html”,“”,“&lt;p&gt;The
+class <a href="../../LogLine.html">LogLine</a> is specifically to represent
+logfile lines as seen in n<em>psmetric01</em>. Here a few examples
+…n”],[“LogWalker”,“”,“LogWalker.html”,“”,“&lt;p&gt;The class
+<code>LogWalker</code> abstracts the most common accessnprocedures to visit
+the log files.n&lt;p&gt;The class is …<a
+href=”http://“Object”,“”,“Object.html”,“”,“”“>n”],</a>,[“String”,“”,“String.html”,“”,“&lt;p&gt;We
+overload the class <code>String</code> with some methods to simplify
+thenmanagement of dates.n&lt;p&gt;Dates appearing in
+…n”],[“Tailer”,“”,“Tailer.html”,“”,“&lt;p&gt;class <code>TailFile</code>
+define behaviour of a <code>TailFile</code>nobject. A
+<code>TailFile</code>n&lt;p&gt;Examplenn&lt;pre&gt;tf = <a
+href="../../Tailer.html#method-c-new">Tailer.new</a>(&amp;quot;/u2/logs/psmetric01/messages&amp;quot;)
+…&lt;/<a
+href="http://"Warbler","","Warbler.html","",""">pre>n”],</a>,[“allFiles”,“LogWalker”,“LogWalker.html#method-i-allFiles”,“()”,“&lt;p&gt;Return
+<code>Enumerator</code>. The returned enumerator goes through
+alln&lt;strong&gt;files&lt;/strong&gt;n&lt;p&gt;contained below
+<code>basePath</code> node. Directories …<a
+href=”http://“close”,“Tailer”,“Tailer.html#method-i-close”,“()”,“”“>n”],</a>,[“getDateStr”,“LogLine”,“LogLine.html#method-i-getDateStr”,“()”,“&lt;p&gt;Return
+&lt;strong&gt;String&lt;/strong&gt;, the date substring from the log
+line.nReturns &lt;strong&gt;“”&lt;/strong&gt;  if the date can&amp;#39;t be
+found
+…n”],[“getDateTime”,“LogLine”,“LogLine.html#method-i-getDateTime”,“()”,“&lt;p&gt;Returns
+<code>DateTime</code>. Date of the logline as
+an<code>DateTime</code>.n”],[“getElasticDescription”,“ElasticTalk”,“ElasticTalk.html#method-i-getElasticDescription”,“()”,“&lt;p&gt;Return
+<code>String</code>. If there is an errore returns nil.  TODO:nExeceptions.
+Gives a back a string giving some
+…n”],[“getFullLogDate”,“LogLine”,“LogLine.html#method-i-getFullLogDate”,“()”,“&lt;p&gt;Returns
+<code>String</code>. Date of the logline in
+formatn&lt;strong&gt;FullLogDate&lt;/strong&gt;.n”],[“getLines”,“Tailer”,“Tailer.html#method-i-getLines”,“()”,“&lt;p&gt;get
+the new lines (tail lines) from the
+filen”],[“getLogDate”,“LogLine”,“LogLine.html#method-i-getLogDate”,“()”,“&lt;p&gt;Returns
+<code>String</code>. Date of the logline in
+formatn&lt;strong&gt;LogDate&lt;/strong&gt;.n”],[“hasDate?”,“LogLine”,“LogLine.html#method-i-hasDate-3F”,“()”,“&lt;p&gt;Returns
+a &lt;strong&gt;Boolean&lt;/strong&gt;, &lt;strong&gt;true&lt;/strong&gt;
+if the LogLinenstring contains a correct date substring and false
+otherwise.
+…n”],[“is_FullLogDate?”,“String”,“String.html#method-i-is_FullLogDate-3F”,“()”,“&lt;p&gt;Returns
+Boolean. Checks if a <code>String</code> is in then<code>FullLogDate</code>
+format.nn&lt;pre&gt;&amp;quot;2011 Nov 01
+14:12:10&amp;quot;.is_FullLogDate?
+…&lt;/pre&gt;n”],[“is_LogDate?”,“String”,“String.html#method-i-is_LogDate-3F”,“()”,“&lt;p&gt;Returns
+Boolean. Checks if the <code>String</code> is in then<code>LogDate</code>
+format.nn&lt;pre&gt;&amp;quot;Nov 01
+14:12:10&amp;quot;.is_LogDate?n=&amp;gt; true
+…&lt;/pre&gt;n”],[“is_elasticReachable?”,“ElasticTalk”,“ElasticTalk.html#method-i-is_elasticReachable-3F”,“()”,“&lt;p&gt;Return
+<code>Object</code>.  Equivalent to “ssh -L
+9200:localhost:9200np@elavi”n&lt;p&gt;def ElasticTalk.openElaviTunnel
+…n”],[“logFiles”,“LogWalker”,“LogWalker.html#method-i-logFiles”,“()”,“&lt;p&gt;Return
+<code>Enumerator</code>. Return all files that can be considere lognfiles. 
+In our setup, these are all files
+…n”],[“new”,“ElasticTalk”,“ElasticTalk.html#method-c-new”,“(host=&quot;localhost&quot;,
+port=&quot;9200&quot;)”,“”],[“new”,“LogLine”,“LogLine.html#method-c-new”,“(str)”,“&lt;p&gt;Example:nn&lt;pre
+class=&quot;ruby&quot;&gt;&lt;span
+class=&quot;ruby-identifier&quot;&gt;ll&lt;/span&gt; = &lt;span
+class=&quot;ruby-constant&quot;&gt;LogLine&lt;/span&gt;.&lt;span
+class=&quot;ruby-identifier&quot;&gt;new&lt;/span&gt;( &lt;span
+class=&quot;ruby-string&quot;&gt;&amp;quot;Oct 31 11:06:01 psana101
+systemd: Stopping User Slice of nmingott.&amp;quot;&lt;/span&gt;
+)n&lt;/pre&gt;n”],[“new”,“LogWalker”,“LogWalker.html#method-c-new”,“(path)”,“&lt;p&gt;It
+is supposed the logfiles live under a common directory node. 
+Heren<code>path</code> is a <code>String</code> and must be the
+…n”],[“new”,“Tailer”,“Tailer.html#method-c-new”,“(path)”,“&lt;p&gt;Example 
+tf =
+TailFile.new(“/u2/logs/psmetric01/messages”)n”],[“parse”,“LogLine”,“LogLine.html#method-i-parse”,“()”,“&lt;p&gt;Parse
+the <a href="../../LogLine.html">LogLine</a> string and returns a Ruby
+<code>Hash</code>. Returnn<code>Hash</code>.n&lt;p&gt;These keys are added
+to the onse found
+…n”],[“postLogAsJSON”,“ElasticTalk”,“ElasticTalk.html#method-i-postLogAsJSON”,“(index=&quot;lclslogs-test&quot;,
+type=&quot;log&quot;, jsonStr, bulk: false)”,“&lt;p&gt;Return
+<code>...</code>. Insert a single document into Elasticsearch usingnPOST.
+With this method of insertion the
+…n”],[“postLogAsRubyHash”,“ElasticTalk”,“ElasticTalk.html#method-i-postLogAsRubyHash”,“(index=&quot;lclslogs-test&quot;,
+type=&quot;log&quot;, diz)”,“&lt;p&gt;Examplenn&lt;pre&gt;d = {date:
+&amp;quot;2018 Nov 10 22:48:00&amp;quot;, machine: &amp;quot;foo&amp;quot;,
+n     service: &amp;quot;bar&amp;quot;, message: &amp;quot;hello
+2&amp;quot;} 
+…&lt;/pre&gt;n”],[“postLogBatch”,“ElasticTalk”,“ElasticTalk.html#method-i-postLogBatch”,“(index=&quot;lclslogs-test&quot;,
+type=&quot;log&quot;, list, fake: false)”,“&lt;p&gt;Sends a list of Ruby
+<code>Hash</code> objects to Elasticsearch in bluk.n&lt;p&gt;Returns:
+[sizeInByteOfThePayloadSend, responseObjectFromElasticSearch].
+…n”],[“rot1Files”,“LogWalker”,“LogWalker.html#method-i-rot1Files”,“()”,“&lt;p&gt;Return
+<code>Enumerator</code>. Return all log files that have been
+rotatednexactly one time. There files in out setup
+…n”],[“rotCompressedFiles”,“LogWalker”,“LogWalker.html#method-i-rotCompressedFiles”,“()”,“&lt;p&gt;Return
+<code>Enumerator</code>. Return all files that can be consideredncompressed
+log files. Those are files that
+…n”],[“to_DateTime”,“String”,“String.html#method-i-to_DateTime”,“()”,“&lt;p&gt;Returns
+<code>DateTime</code>. Given a <code>LogDate</code>
+orn<code>FullLogDate</code> format string, it  returns a
+<code>DateTime</code>nobject. In the
+…n”],[“to_ElasticDate”,“DateTime”,“DateTime.html#method-i-to_ElasticDate”,“()”,“&lt;p&gt;Return
+<code>String</code>. The string is in a format thatnElasticsearch/Kibana 
+can recognize as a date:n“2018-11-11T15:24:43+TIMEZONE”
+…n”],[“to_ElasticDate”,“String”,“String.html#method-i-to_ElasticDate”,“()”,“&lt;p&gt;Returns
+<code>String</code>. Convert to a date format undertandable
+bynElasticsearch/Kibana. i.e.: “2018-11-11T15:24:43”
+…n”],[“to_FullLogDate”,“DateTime”,“DateTime.html#method-i-to_FullLogDate”,“()”,“&lt;p&gt;Returns
+a <code>String</code>. The string is in then<code>FullLogDate</code>
+format.nn&lt;pre&gt;d = DateTime.nown=&amp;gt; #&amp;lt;DateTime:
+2018-11-02T19:36:40-07:00
+…&lt;/pre&gt;n”],[“to_FullLogDate”,“String”,“String.html#method-i-to_FullLogDate”,“()”,“&lt;p&gt;Returns
+<code>String</code>. Given a string in the <code>LogDate</code>
+orn<code>FullLogDate</code> format  return a <code>String</code> in
+then<code>FullLogDate</code>
+…n”],[“to_LogDate”,“DateTime”,“DateTime.html#method-i-to_LogDate”,“()”,“&lt;p&gt;Returns
+a <code>String</code>. The string is in the
+<code>LogDate</code>nformat.nn&lt;pre&gt;d = DateTime.nown=&amp;gt;
+#&amp;lt;DateTime: 2018-11-02T19:36:40-07:00
+…&lt;/pre&gt;n”],[“to_LogDate”,“String”,“String.html#method-i-to_LogDate”,“()”,“&lt;p&gt;Returns
+<code>String</code>. Given a string in the <code>LogDate</code>
+ofn<code>FullLogDate</code> format returns a string in
+then<code>LogDate</code> format.
+…n”],[“LCLS-LogBeat3.rb,v”,“”,“RCS/LCLS-LogBeat3_rb,v.html”,“”,“&lt;p&gt;head
+1.3; access; symbols; locksnn&lt;pre&gt;nmingott:1.3;
+strict;&lt;/pre&gt;n&lt;p&gt;comment @#
+@;n”],[“logLine.rb,v”,“”,“RCS/logLine_rb,v.html”,“”,“&lt;p&gt;head    1.1;
+access; symbols; locks; strict; comment @# @;n&lt;p&gt;1.1 date   
+2018.11.15.04.44.06;    author …<a
+href=”http://“README”,“”,“README.html”,“”,“”“>n”],</a>,[“makeDoc.sh”,“”,“makeDoc_sh.html”,“”,“&lt;p&gt;#!/usr/bin/env
+bashn&lt;p&gt;rdocn”],[“makeJar.sh”,“”,“makeJar_sh.html”,“”,“&lt;p&gt;#
+read the config file in ./config/warble.rb to know what to do, # e.g.
+tonknow that it must build a
+…n”],[“logToElasticSenderRunner.sh”,“”,“old/logToElasticSenderRunner_sh.html”,“”,“&lt;p&gt;#!/bin/bashn&lt;p&gt;cd
+/reg/neh/home/nmingott source /reg/neh/home/nmingott/.bashrcn&lt;p&gt;cd
+/reg/neh/home/nmingott/scripts/lclsLogBeat2 …n”]]}}</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

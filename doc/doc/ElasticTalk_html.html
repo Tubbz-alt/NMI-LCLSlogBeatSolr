@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>ElasticTalk.html - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../RCS/LCLS-LogBeat3_rb,v.html">LCLS-LogBeat3.rb,v</a>
+  
+    <li class="file"><a href="../RCS/logLine_rb,v.html">logLine.rb,v</a>
+  
+    <li class="file"><a href="../README.html">README</a>
+  
+    <li class="file"><a href="../doc/DateTime_html.html">DateTime.html</a>
+  
+    <li class="file"><a href="../doc/ElasticTalk_html.html">ElasticTalk.html</a>
+  
+    <li class="file"><a href="../doc/IO_html.html">IO.html</a>
+  
+    <li class="file"><a href="../doc/LogLine_html.html">LogLine.html</a>
+  
+    <li class="file"><a href="../doc/LogWalker_html.html">LogWalker.html</a>
+  
+    <li class="file"><a href="../doc/Object_html.html">Object.html</a>
+  
+    <li class="file"><a href="../doc/RCS/LCLS-LogBeat3_rb,v_html.html">LCLS-LogBeat3_rb,v.html</a>
+  
+    <li class="file"><a href="../doc/RCS/logLine_rb,v_html.html">logLine_rb,v.html</a>
+  
+    <li class="file"><a href="../doc/README_html.html">README.html</a>
+  
+    <li class="file"><a href="../doc/String_html.html">String.html</a>
+  
+    <li class="file"><a href="../doc/Tailer_html.html">Tailer.html</a>
+  
+    <li class="file"><a href="../doc/Warbler_html.html">Warbler.html</a>
+  
+    <li class="file"><a href="../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../doc/css/fonts_css.html">fonts.css</a>
+  
+    <li class="file"><a href="../doc/css/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="../doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="../doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="../doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="../doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="../doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="../doc/makeDoc_sh_html.html">makeDoc_sh.html</a>
+  
+    <li class="file"><a href="../doc/makeJar_sh_html.html">makeJar_sh.html</a>
+  
+    <li class="file"><a href="../doc/old/logToElasticSenderRunner_sh_html.html">logToElasticSenderRunner_sh.html</a>
+  
+    <li class="file"><a href="../doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li class="file"><a href="../lib/RCS/tailer_rb,v.html">tailer.rb,v</a>
+  
+    <li class="file"><a href="../makeDoc_sh.html">makeDoc.sh</a>
+  
+    <li class="file"><a href="../makeJar_sh.html">makeJar.sh</a>
+  
+    <li class="file"><a href="../old/logToElasticSenderRunner_sh.html">logToElasticSenderRunner.sh</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../DateTime.html">DateTime</a>
+  
+    <li><a href="../ElasticTalk.html">ElasticTalk</a>
+  
+    <li><a href="../LogLine.html">LogLine</a>
+  
+    <li><a href="../LogWalker.html">LogWalker</a>
+  
+    <li><a href="../Object.html">Object</a>
+  
+    <li><a href="../String.html">String</a>
+  
+    <li><a href="../Tailer.html">Tailer</a>
+  
+    <li><a href="../Warbler.html">Warbler</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<p>&lt;!DOCTYPE html&gt;</p>
+
+<p>&lt;html&gt; &lt;head&gt; &lt;meta charset=“UTF-8”&gt;</p>
+
+<p>&lt;title&gt;class <a href="../ElasticTalk.html">ElasticTalk</a> - RDoc
+Documentation&lt;/title&gt;</p>
+
+<p>&lt;script type=“text/javascript”&gt;</p>
+
+<pre>var rdoc_rel_prefix = &quot;./&quot;;
+var index_rel_prefix = &quot;./&quot;;</pre>
+
+<p>&lt;/script&gt;</p>
+
+<p>&lt;script src=“./js/jquery.js”&gt;&lt;/script&gt; &lt;script
+src=“./js/darkfish.js”&gt;&lt;/script&gt;</p>
+
+<p>&lt;link href=“./css/fonts.css” rel=“stylesheet”&gt; &lt;link
+href=“./css/rdoc.css” rel=“stylesheet”&gt;</p>
+
+<p>&lt;body id=“top” role=“document” class=“class”&gt; &lt;nav
+role=“navigation”&gt;</p>
+
+<pre>&lt;div id=&quot;project-navigation&quot;&gt;
+  &lt;div id=&quot;home-section&quot; role=&quot;region&quot; title=&quot;Quick navigation&quot; class=&quot;nav-section&quot;&gt;
+&lt;h2&gt;
+  &lt;a href=&quot;./index.html&quot; rel=&quot;home&quot;&gt;Home&lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;div id=&quot;table-of-contents-navigation&quot;&gt;
+  &lt;a href=&quot;./table_of_contents.html#pages&quot;&gt;Pages&lt;/a&gt;
+  &lt;a href=&quot;./table_of_contents.html#classes&quot;&gt;Classes&lt;/a&gt;
+  &lt;a href=&quot;./table_of_contents.html#methods&quot;&gt;Methods&lt;/a&gt;
+&lt;/div&gt;</pre>
+
+<p>&lt;/div&gt;</p>
+
+<pre>  &lt;div id=&quot;search-section&quot; role=&quot;search&quot; class=&quot;project-section initially-hidden&quot;&gt;
+&lt;form action=&quot;#&quot; method=&quot;get&quot; accept-charset=&quot;utf-8&quot;&gt;
+  &lt;div id=&quot;search-field-wrapper&quot;&gt;
+    &lt;input id=&quot;search-field&quot; role=&quot;combobox&quot; aria-label=&quot;Search&quot;
+           aria-autocomplete=&quot;list&quot; aria-controls=&quot;search-results&quot;
+           type=&quot;text&quot; name=&quot;search&quot; placeholder=&quot;Search&quot; spellcheck=&quot;false&quot;
+           title=&quot;Type to search, Up and Down to navigate, Enter to load&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;ul id=&quot;search-results&quot; aria-label=&quot;Search Results&quot;
+      aria-busy=&quot;false&quot; aria-expanded=&quot;false&quot;
+      aria-atomic=&quot;false&quot; class=&quot;initially-hidden&quot;&gt;&lt;/ul&gt;
+&lt;/form&gt;</pre>
+
+<p>&lt;/div&gt;</p>
+
+<pre>&lt;/div&gt;
+
+&lt;div id=&quot;class-metadata&quot;&gt;
+
+  &lt;div id=&quot;parent-class-section&quot; class=&quot;nav-section&quot;&gt;
+&lt;h3&gt;Parent&lt;/h3&gt;
+
+&lt;p class=&quot;link&quot;&gt;&lt;a href=&quot;Object.html&quot;&gt;Object&lt;/a&gt;</pre>
+
+<p>&lt;/div&gt;</p>
+
+<pre>&lt;!-- Method Quickref --&gt;</pre>
+
+<p>&lt;div id=“method-list-section” class=“nav-section”&gt;</p>
+
+<pre>&lt;h3&gt;Methods&lt;/h3&gt;
+
+&lt;ul class=&quot;link-list&quot; role=&quot;directory&quot;&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-c-new&quot;&gt;::new&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-getElasticDescription&quot;&gt;#getElasticDescription&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-is_elasticReachable-3F&quot;&gt;#is_elasticReachable?&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-postLogAsJSON&quot;&gt;#postLogAsJSON&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-postLogAsRubyHash&quot;&gt;#postLogAsRubyHash&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-postLogBatch&quot;&gt;#postLogBatch&lt;/a&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/div&gt;</p>
+
+<pre>&lt;/div&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<p>&lt;main role=“main” aria-labelledby=“class-ElasticTalk”&gt;</p>
+
+<pre class="ruby"><span class="ruby-operator">&lt;</span><span class="ruby-identifier">h1</span> <span class="ruby-identifier">id</span>=<span class="ruby-string">&quot;class-ElasticTalk&quot;</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;class&quot;</span><span class="ruby-operator">&gt;</span>
+  <span class="ruby-keyword">class</span> <span class="ruby-constant">ElasticTalk</span>
+<span class="ruby-operator">&lt;</span><span class="ruby-regexp">/h1&gt;
+
+&lt;section class=&quot;description&quot;&gt;
+</span></pre>
+
+<p>&lt;p&gt;Class to abstract the comunication with
+&lt;strong&gt;Elasticsearch&lt;/strong&gt;.&lt;/p&gt;</p>
+
+<pre>&lt;/section&gt;
+
+&lt;section id=&quot;5Buntitled-5D&quot; class=&quot;documentation-section&quot;&gt;
+
+  &lt;section class=&quot;attribute-method-details&quot; class=&quot;method-section&quot;&gt;
+    &lt;header&gt;
+      &lt;h3&gt;Attributes&lt;/h3&gt;
+    &lt;/header&gt;
+
+    &lt;div id=&quot;attribute-i-host&quot; class=&quot;method-detail&quot;&gt;
+      &lt;div class=&quot;method-heading attribute-method-heading&quot;&gt;
+        &lt;span class=&quot;method-name&quot;&gt;host&lt;/span&gt;&lt;span
+          class=&quot;attribute-access-type&quot;&gt;[R]&lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;method-description&quot;&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div id=&quot;attribute-i-port&quot; class=&quot;method-detail&quot;&gt;
+      &lt;div class=&quot;method-heading attribute-method-heading&quot;&gt;
+        &lt;span class=&quot;method-name&quot;&gt;port&lt;/span&gt;&lt;span
+          class=&quot;attribute-access-type&quot;&gt;[R]&lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;method-description&quot;&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/section&gt;
+
+   &lt;section id=&quot;public-class-5Buntitled-5D-method-details&quot; class=&quot;method-section&quot;&gt;
+     &lt;header&gt;
+       &lt;h3&gt;Public Class Methods&lt;/h3&gt;
+     &lt;/header&gt;
+
+    &lt;div id=&quot;method-c-new&quot; class=&quot;method-detail &quot;&gt;
+
+      &lt;div class=&quot;method-heading&quot;&gt;
+        &lt;span class=&quot;method-name&quot;&gt;new&lt;/span&gt;&lt;span
+          class=&quot;method-args&quot;&gt;(host=&amp;quot;localhost&amp;quot;, port=&amp;quot;9200&amp;quot;)&lt;/span&gt;
+
+        &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+      &lt;/div&gt;
+
+      &lt;div class=&quot;method-description&quot;&gt;
+
+        &lt;div class=&quot;method-source-code&quot; id=&quot;new-source&quot;&gt;
+          &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/elasticTalk.rb, line 12&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier ruby-title”&gt;initialize&lt;/span&gt;(&lt;span
+class=“ruby-identifier”&gt;host&lt;/span&gt;=&lt;span
+class=“ruby-string”&gt;&amp;quot;localhost&amp;quot;&lt;/span&gt;, &lt;span
+class=“ruby-identifier”&gt;port&lt;/span&gt;=&lt;span
+class=“ruby-string”&gt;&amp;quot;9200&amp;quot;&lt;/span&gt;)</p>
+
+<pre>&lt;span class=&quot;ruby-ivar&quot;&gt;@host&lt;/span&gt; = &lt;span class=&quot;ruby-identifier&quot;&gt;host&lt;/span&gt;
+&lt;span class=&quot;ruby-ivar&quot;&gt;@port&lt;/span&gt; = &lt;span class=&quot;ruby-identifier&quot;&gt;port&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/section&gt;
+
+ &lt;section id=&quot;public-instance-5Buntitled-5D-method-details&quot; class=&quot;method-section&quot;&gt;
+   &lt;header&gt;
+     &lt;h3&gt;Public Instance Methods&lt;/h3&gt;
+   &lt;/header&gt;
+
+  &lt;div id=&quot;method-i-getElasticDescription&quot; class=&quot;method-detail &quot;&gt;
+
+    &lt;div class=&quot;method-heading&quot;&gt;
+      &lt;span class=&quot;method-name&quot;&gt;getElasticDescription&lt;/span&gt;&lt;span
+        class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+
+      &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+    &lt;/div&gt;
+
+    &lt;div class=&quot;method-description&quot;&gt;
+
+      &lt;p&gt;Return &lt;code&gt;String&lt;/code&gt;. If there is an errore returns nil.  TODO:</pre>
+
+<p>Execeptions. Gives a back a string giving some details on the Elastisearch 
+server.&lt;/p&gt;</p>
+
+<pre>&lt;div class=&quot;method-source-code&quot; id=&quot;getElasticDescription-source&quot;&gt;
+  &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/elasticTalk.rb, line 48&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier ruby-title”&gt;getElasticDescription&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-identifier&quot;&gt;uri&lt;/span&gt; = &lt;span class=&quot;ruby-constant&quot;&gt;URI&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;parse&lt;/span&gt;(&lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;http://#{@host}:#{@port}&amp;quot;&lt;/span&gt;)
+&lt;span class=&quot;ruby-identifier&quot;&gt;out&lt;/span&gt; = &lt;span class=&quot;ruby-constant&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;ruby-constant&quot;&gt;HTTP&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;get_response&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;uri&lt;/span&gt;)
+&lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;out&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;code&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;to_i&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;ruby-value&quot;&gt;200&lt;/span&gt; 
+  &lt;span class=&quot;ruby-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;out&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;body&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;else&lt;/span&gt; 
+  &lt;span class=&quot;ruby-constant&quot;&gt;STDERR&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Error reachin Elasticsearch: &amp;quot;&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;+&lt;/span&gt; 
+              &lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;#{out.header.code} -- #{out.header.message}&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;ruby-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;nil&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;method-i-is_elasticReachable-3F&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;is_elasticReachable?&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;p&gt;Return &lt;code&gt;Object&lt;/code&gt;.  Equivalent to “ssh -L 9200:localhost:9200</pre>
+
+<p>p@elavi”&lt;/p&gt;</p>
+
+<p>&lt;p&gt;def ElasticTalk.openElaviTunnel&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;out = &amp;quot;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;end&lt;/p&gt;</p>
+
+<p>&lt;p&gt;Returns <code>Truth</code> value. Il Elastic search is reachable
+returns <code>true</code>. Otherwise <code>false</code>. Catches
+exceptions, always returns the truth value. Roughly equivalent to this
+shell command.&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;$&amp;gt; curl &amp;#39;<a
+href="http://#{@host}:#{@port}&#39;</pre">#{@host}:#{@port}&#39;</pre</a>&gt;</p>
+
+<pre>&lt;div class=&quot;method-source-code&quot; id=&quot;is_elasticReachable-3F-source&quot;&gt;
+  &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/elasticTalk.rb, line 28&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier ruby-title”&gt;is_elasticReachable?&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-identifier&quot;&gt;uri&lt;/span&gt; = &lt;span class=&quot;ruby-constant&quot;&gt;URI&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;parse&lt;/span&gt;(&lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;http://#{@host}:#{@port}&amp;quot;&lt;/span&gt;)
+&lt;span class=&quot;ruby-identifier&quot;&gt;out&lt;/span&gt; = &lt;span class=&quot;ruby-constant&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;ruby-constant&quot;&gt;HTTP&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;get_response&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;uri&lt;/span&gt;)
+&lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;out&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;code&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;to_i&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;ruby-value&quot;&gt;200&lt;/span&gt; 
+  &lt;span class=&quot;ruby-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;else&lt;/span&gt; 
+  &lt;span class=&quot;ruby-constant&quot;&gt;STDERR&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Error reaching Elasticsearch: &amp;quot;&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;+&lt;/span&gt; 
+              &lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;#{out.header.code} -- #{out.header.message}&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;ruby-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;false&lt;/span&gt; 
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;ruby-comment&quot;&gt;# questo ci pretegge da eventuali eccezioni.&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;rescue&lt;/span&gt; &lt;span
+class=“ruby-operator”&gt;=&amp;gt;&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;ex&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-constant&quot;&gt;STDERR&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;ex&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;false&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;method-i-postLogAsJSON&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;postLogAsJSON&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;(index=&amp;quot;lclslogs-test&amp;quot;, type=&amp;quot;log&amp;quot;, jsonStr, bulk: false)&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;p&gt;Return &lt;code&gt;...&lt;/code&gt;. Insert a single document into Elasticsearch using</pre>
+
+<p>POST. With this method of insertion the document “ID” is auto-generated by
+Elasticsearch. Example&lt;/p&gt;</p>
+
+<p>&lt;pre class=“ruby”&gt;&lt;span class=“ruby-identifier”&gt;jd&lt;/span&gt;
+= &lt;span
+class=“ruby-string”&gt;&amp;#39;{&amp;quot;date&amp;quot;:&amp;quot;2018
+Nov 10 20:00:00&amp;quot;,
+&amp;quot;machine&amp;quot;:&amp;quot;foo&amp;quot;,</p>
+
+<pre>&amp;quot;service&amp;quot;:&amp;quot;bar&amp;quot;, &amp;quot;message&amp;quot;:&amp;quot;hello world&amp;quot;}&amp;#39;&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-identifier”&gt;ec&lt;/span&gt;.&lt;span
+class=“ruby-identifier”&gt;postLog&lt;/span&gt;(&lt;span
+class=“ruby-string”&gt;&amp;quot;lclslogs-test&amp;quot;&lt;/span&gt;,
+&lt;span class=“ruby-string”&gt;&amp;quot;log&amp;quot;&lt;/span&gt;, )
+&lt;/pre&gt;</p>
+
+<pre>&lt;div class=&quot;method-source-code&quot; id=&quot;postLogAsJSON-source&quot;&gt;
+  &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/elasticTalk.rb, line 68&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier ruby-title”&gt;postLogAsJSON&lt;/span&gt;(&lt;span
+class=“ruby-identifier”&gt;index&lt;/span&gt;=&lt;span
+class=“ruby-string”&gt;&amp;quot;lclslogs-test&amp;quot;&lt;/span&gt;,
+&lt;span class=“ruby-identifier”&gt;type&lt;/span&gt;=&lt;span
+class=“ruby-string”&gt;&amp;quot;log&amp;quot;&lt;/span&gt;, &lt;span
+class=“ruby-identifier”&gt;jsonStr&lt;/span&gt;, &lt;span
+class=“ruby-value”&gt;bulk:&lt;/span&gt; &lt;span
+class=“ruby-keyword”&gt;false&lt;/span&gt;)</p>
+
+<pre>&lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;bulk&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;true&lt;/span&gt; 
+  &lt;span class=&quot;ruby-identifier&quot;&gt;uri&lt;/span&gt; = &lt;span class=&quot;ruby-constant&quot;&gt;URI&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;parse&lt;/span&gt;(&lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;http://#{@host}:#{@port}/#{index}/#{type}/_bulk&amp;quot;&lt;/span&gt;)
+&lt;span class=&quot;ruby-keyword&quot;&gt;else&lt;/span&gt;
+  &lt;span class=&quot;ruby-identifier&quot;&gt;uri&lt;/span&gt; = &lt;span class=&quot;ruby-constant&quot;&gt;URI&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;parse&lt;/span&gt;(&lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;http://#{@host}:#{@port}/#{index}/#{type}/&amp;quot;&lt;/span&gt;)
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;ruby-identifier&quot;&gt;http&lt;/span&gt; = &lt;span class=&quot;ruby-constant&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;ruby-constant&quot;&gt;HTTP&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;new&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;uri&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;host&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;uri&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;port&lt;/span&gt;)
+&lt;span class=&quot;ruby-identifier&quot;&gt;req&lt;/span&gt; = &lt;span class=&quot;ruby-constant&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;ruby-constant&quot;&gt;HTTP&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;ruby-constant&quot;&gt;Post&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;new&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;uri&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;path&lt;/span&gt;, &lt;span class=&quot;ruby-string&quot;&gt;&amp;#39;Content-Type&amp;#39;&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;#39;application/json&amp;#39;&lt;/span&gt;)
+&lt;span class=&quot;ruby-identifier&quot;&gt;req&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;body&lt;/span&gt; = &lt;span class=&quot;ruby-identifier&quot;&gt;jsonStr&lt;/span&gt;
+&lt;span class=&quot;ruby-identifier&quot;&gt;res&lt;/span&gt; = &lt;span class=&quot;ruby-identifier&quot;&gt;http&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;request&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;req&lt;/span&gt;)
+&lt;span class=&quot;ruby-comment&quot;&gt;# puts &amp;quot;response: #{res.body}&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;res&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;method-i-postLogAsRubyHash&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;postLogAsRubyHash&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;(index=&amp;quot;lclslogs-test&amp;quot;, type=&amp;quot;log&amp;quot;, diz)&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;p&gt;Example&lt;/p&gt;</pre>
+
+<p>&lt;pre class=“ruby”&gt;&lt;span class=“ruby-identifier”&gt;d&lt;/span&gt;
+= {&lt;span class=“ruby-value”&gt;date:&lt;/span&gt; &lt;span
+class=“ruby-string”&gt;&amp;quot;2018 Nov 10
+22:48:00&amp;quot;&lt;/span&gt;, &lt;span
+class=“ruby-value”&gt;machine:&lt;/span&gt; &lt;span
+class=“ruby-string”&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;,</p>
+
+<pre>&lt;span class=&quot;ruby-value&quot;&gt;service:&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;bar&amp;quot;&lt;/span&gt;, &lt;span class=&quot;ruby-value&quot;&gt;message:&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;hello 2&amp;quot;&lt;/span&gt;}</pre>
+
+<p>&lt;span class=“ruby-identifier”&gt;et&lt;/span&gt;.&lt;span
+class=“ruby-identifier”&gt;postLogAsRubyHash&lt;/span&gt;(&lt;span
+class=“ruby-identifier”&gt;d&lt;/span&gt;) &lt;/pre&gt;</p>
+
+<pre>&lt;div class=&quot;method-source-code&quot; id=&quot;postLogAsRubyHash-source&quot;&gt;
+  &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/elasticTalk.rb, line 88&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier
+ruby-title”&gt;postLogAsRubyHash&lt;/span&gt;(&lt;span
+class=“ruby-identifier”&gt;index&lt;/span&gt;=&lt;span
+class=“ruby-string”&gt;&amp;quot;lclslogs-test&amp;quot;&lt;/span&gt;,
+&lt;span class=“ruby-identifier”&gt;type&lt;/span&gt;=&lt;span
+class=“ruby-string”&gt;&amp;quot;log&amp;quot;&lt;/span&gt;, &lt;span
+class=“ruby-identifier”&gt;diz&lt;/span&gt;)</p>
+
+<pre>&lt;span class=&quot;ruby-identifier&quot;&gt;postLogAsJSON&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;index&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;type&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;diz&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;to_json&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&quot;method-i-postLogBatch&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;postLogBatch&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;(index=&amp;quot;lclslogs-test&amp;quot;, type=&amp;quot;log&amp;quot;, list, fake: false)&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;p&gt;Sends a list of Ruby &lt;code&gt;Hash&lt;/code&gt; objects to Elasticsearch in bluk.&lt;/p&gt;</pre>
+
+<p>&lt;p&gt;Returns: [sizeInByteOfThePayloadSend,
+responseObjectFromElasticSearch]. if <code>:fake</code> is
+<code>true</code> returns <code>nil</code>.&lt;/p&gt;</p>
+
+<p>&lt;p&gt;Conversion to JSON is automatic. Conversion to the BULK format for
+Elasticsearch is automatic.&lt;/p&gt;</p>
+
+<p>&lt;p&gt;If &amp;#39;fake&amp;#39; is <code>true</code> then the JSON
+payload is &lt;strong&gt;not&lt;/strong&gt; sent to Elasticseach  but
+printed to <code>STDOUT</code>.&lt;/p&gt;</p>
+
+<p>&lt;p&gt;Example&lt;/p&gt;</p>
+
+<p>&lt;pre class=“ruby”&gt;&lt;span class=“ruby-identifier”&gt;d1&lt;/span&gt;
+= {&lt;span class=“ruby-value”&gt;date:&lt;/span&gt; &lt;span
+class=“ruby-string”&gt;&amp;quot;2018 11 Nov
+11:32:00&amp;quot;&lt;/span&gt;, &lt;span
+class=“ruby-value”&gt;machine:&lt;/span&gt; &lt;span
+class=“ruby-string”&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;, &lt;span
+class=“ruby-value”&gt;service:&lt;/span&gt; &lt;span
+class=“ruby-string”&gt;&amp;quot;bar&amp;quot;&lt;/span&gt;, &lt;span
+class=“ruby-value”&gt;message:&lt;/span&gt; &lt;span
+class=“ruby-string”&gt;&amp;quot;hello Sunday&amp;quot;&lt;/span&gt;}
+&lt;span class=“ruby-identifier”&gt;d2&lt;/span&gt; = {&lt;span
+class=“ruby-value”&gt;date:&lt;/span&gt; &lt;span
+class=“ruby-string”&gt;&amp;quot;2018 11 Nov
+11:33:00&amp;quot;&lt;/span&gt;, &lt;span
+class=“ruby-value”&gt;machine:&lt;/span&gt; &lt;span
+class=“ruby-string”&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;, &lt;span
+class=“ruby-value”&gt;service:&lt;/span&gt; &lt;span
+class=“ruby-string”&gt;&amp;quot;bar&amp;quot;&lt;/span&gt;, &lt;span
+class=“ruby-value”&gt;message:&lt;/span&gt; &lt;span
+class=“ruby-string”&gt;&amp;quot;hello Sunday 2&amp;quot;&lt;/span&gt;}
+&lt;span class=“ruby-identifier”&gt;d3&lt;/span&gt; = {&lt;span
+class=“ruby-value”&gt;date:&lt;/span&gt; &lt;span
+class=“ruby-string”&gt;&amp;quot;2018 11 Nov
+11:34:00&amp;quot;&lt;/span&gt;, &lt;span
+class=“ruby-value”&gt;machine:&lt;/span&gt; &lt;span
+class=“ruby-string”&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;, &lt;span
+class=“ruby-value”&gt;service:&lt;/span&gt; &lt;span
+class=“ruby-string”&gt;&amp;quot;bar&amp;quot;&lt;/span&gt;, &lt;span
+class=“ruby-value”&gt;message:&lt;/span&gt; &lt;span
+class=“ruby-string”&gt;&amp;quot;hello Sunday 3&amp;quot;&lt;/span&gt;}
+&lt;span class=“ruby-identifier”&gt;l&lt;/span&gt; = [&lt;span
+class=“ruby-identifier”&gt;d1&lt;/span&gt;, &lt;span
+class=“ruby-identifier”&gt;d2&lt;/span&gt;, &lt;span
+class=“ruby-identifier”&gt;d3&lt;/span&gt;] &lt;span
+class=“ruby-identifier”&gt;et&lt;/span&gt;.&lt;span
+class=“ruby-identifier”&gt;postLogBatch&lt;/span&gt;(&lt;span
+class=“ruby-identifier”&gt;l&lt;/span&gt;, &lt;span
+class=“ruby-value”&gt;fake:&lt;/span&gt; &lt;span
+class=“ruby-keyword”&gt;true&lt;/span&gt;) &lt;span
+class=“ruby-identifier”&gt;et&lt;/span&gt;.&lt;span
+class=“ruby-identifier”&gt;postLogBatch&lt;/span&gt;(&lt;span
+class=“ruby-identifier”&gt;l&lt;/span&gt;) &lt;/pre&gt;</p>
+
+<pre>&lt;div class=&quot;method-source-code&quot; id=&quot;postLogBatch-source&quot;&gt;
+  &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/elasticTalk.rb, line 111&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier ruby-title”&gt;postLogBatch&lt;/span&gt;(&lt;span
+class=“ruby-identifier”&gt;index&lt;/span&gt;=&lt;span
+class=“ruby-string”&gt;&amp;quot;lclslogs-test&amp;quot;&lt;/span&gt;,
+&lt;span class=“ruby-identifier”&gt;type&lt;/span&gt;=&lt;span
+class=“ruby-string”&gt;&amp;quot;log&amp;quot;&lt;/span&gt;, &lt;span
+class=“ruby-identifier”&gt;list&lt;/span&gt;, &lt;span
+class=“ruby-value”&gt;fake:&lt;/span&gt; &lt;span
+class=“ruby-keyword”&gt;false&lt;/span&gt;)</p>
+
+<pre>&lt;span class=&quot;ruby-comment&quot;&gt;# controlla che &amp;quot;list&amp;quot; sia un array&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;list&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;is_a?&lt;/span&gt; &lt;span class=&quot;ruby-constant&quot;&gt;Array&lt;/span&gt; 
+  &lt;span class=&quot;ruby-identifier&quot;&gt;fail&lt;/span&gt; &lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;Error, &amp;#39;list&amp;#39; must be an array, it is: #{list}.&amp;quot;&lt;/span&gt;      
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;ruby-comment&quot;&gt;# se la lista e&amp;#39; vuota esci&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;list&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;ruby-value&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;ruby-comment&quot;&gt;# controlla che ogni elementi di &amp;#39;list&amp;#39; sia un Hash&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;list&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;all?&lt;/span&gt; {&lt;span class=&quot;ruby-operator&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;x&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;is_a?&lt;/span&gt; &lt;span class=&quot;ruby-constant&quot;&gt;Hash&lt;/span&gt;} 
+  &lt;span class=&quot;ruby-identifier&quot;&gt;fail&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Error, each element of &amp;#39;list&amp;#39; must be an Hash.&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;ruby-comment&quot;&gt;# costruisce la stringa JSON da inviare&lt;/span&gt;
+&lt;span class=&quot;ruby-identifier&quot;&gt;outJ&lt;/span&gt; = &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;ruby-identifier&quot;&gt;list&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;diz&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;ruby-identifier&quot;&gt;tmp&lt;/span&gt; = &lt;span class=&quot;ruby-string&quot;&gt;%Q[ {&amp;quot;index&amp;quot;:{}} \n ]&lt;/span&gt;
+  &lt;span class=&quot;ruby-identifier&quot;&gt;tmp&lt;/span&gt; = &lt;span class=&quot;ruby-identifier&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;diz&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;to_json&lt;/span&gt; 
+  &lt;span class=&quot;ruby-identifier&quot;&gt;outJ&lt;/span&gt; = &lt;span class=&quot;ruby-identifier&quot;&gt;outJ&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;fake&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;true&lt;/span&gt; 
+  &lt;span class=&quot;ruby-comment&quot;&gt;# puts outJ[1..200] + &amp;quot;...&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;ruby-keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;nil&lt;/span&gt; 
+&lt;span class=&quot;ruby-keyword&quot;&gt;else&lt;/span&gt;
+  &lt;span class=&quot;ruby-identifier&quot;&gt;res&lt;/span&gt; = &lt;span class=&quot;ruby-identifier&quot;&gt;postLogAsJSON&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;index&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;type&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;outJ&lt;/span&gt;, &lt;span class=&quot;ruby-value&quot;&gt;bulk:&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;true&lt;/span&gt;)      
+  &lt;span class=&quot;ruby-comment&quot;&gt;# outTmp = res.body[1..100].dup&lt;/span&gt;
+  &lt;span class=&quot;ruby-comment&quot;&gt;# res.clear&lt;/span&gt;
+  &lt;span class=&quot;ruby-keyword&quot;&gt;return&lt;/span&gt; [&lt;span class=&quot;ruby-identifier&quot;&gt;list&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;length&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;outJ&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;size&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;res&lt;/span&gt;]
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>        &lt;/div&gt;
+
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+  &lt;/section&gt;
+
+&lt;/section&gt;</pre>
+
+<p>&lt;/main&gt;</p>
+
+<p>&lt;footer id=“validator-badges” role=“contentinfo”&gt;</p>
+
+<pre>&lt;p&gt;&lt;a href=&quot;https://validator.w3.org/check/referer&quot;&gt;Validate&lt;/a&gt;
+&lt;p&gt;Generated by &lt;a href=&quot;https://ruby.github.io/rdoc/&quot;&gt;RDoc&lt;/a&gt; 6.0.1.
+&lt;p&gt;Based on &lt;a href=&quot;http://deveiate.org/projects/Darkfish-RDoc/&quot;&gt;Darkfish&lt;/a&gt; by &lt;a href=&quot;http://deveiate.org&quot;&gt;Michael Granger&lt;/a&gt;.</pre>
+
+<p>&lt;/footer&gt;</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

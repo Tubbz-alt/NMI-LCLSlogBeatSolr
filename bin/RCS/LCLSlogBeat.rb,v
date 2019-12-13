@@ -1,0 +1,411 @@
+head	1.7;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.7
+date	2019.12.05.07.31.29;	author nmingott;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2018.12.06.19.04.30;	author nmingott;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2018.12.05.22.42.49;	author nmingott;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2018.12.05.20.24.50;	author nmingott;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2018.12.05.00.19.02;	author nmingott;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2018.12.05.00.13.37;	author nmingott;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2018.12.01.00.50.45;	author nmingott;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.7
+log
+@Summary: ok
+@
+text
+@#!/usr/bin/env jruby
+
+# Migrating from Elasticsearch to Solr 
+
+require "resolv"
+require "json"
+# require "pry"
+require_relative "../lib/tailer"
+require_relative "../lib/logWalker"
+# require_relative "../lib/elasticTalk"
+require_relative "../lib/solrTalk"
+require_relative "../lib/logLine"
+
+# require_relative "logDate"
+
+# Open the file to log the data stream sent to Elasticsearch.
+# Useful for debug purposes.
+LOG = File.open("/var/log/LCLSlogBeat.log","a")
+
+# oggetto ElastiTalk che serve per comunicare con Elasticsearch
+# 172.21.32.95 --> psmetric04 
+# ipv4Str =  Resolv.getaddress("psmetric04")
+# et = ElasticTalk.new(ipv4Str, "9200")
+# fail "Error, Elasticsearch is not reachable" if not et.is_elasticReachable?
+
+ipv4Str =  Resolv.getaddress("psmetric04")
+st = SolrTalk.new(ipv4Str, "8983")
+fail "Error, Solr is not reachable" if not st.is_solrReachable?
+
+# oggetto LogWalker che serve per trovare i logfiles 
+lw = LogWalker.new("/u2/logs")
+
+# *** Temporarily a brief one *** 
+# lista di tutti i logfiles 
+
+allLogFiles = lw.logFiles.to_a; nil 
+# allLogFiles = [ "/u2/logs/psmetric01/messages", "/u2/logs/psmetric04/messages"  ] ; nil 
+
+# binding.pry
+
+# costruisce lista di tutti i tailable files 
+# una "tailable" file e' un file su cui si puo' 
+# chiamare il metodo "tail"
+tailableFiles = []
+allLogFiles.each do |path|
+  unless File.stat(path).readable? then
+    # If we send immediately a message to the logfile it will not
+    # be seen by our system because the tailing has still to be started.
+    # So we wait a bit, a few seconds, arbitrarily before throwing this message.
+    # The thread is necessary to let the main flux of the program go on.
+    Thread.new { 
+      sleep 10
+      errMsg = "Error, file not readable: '#{path}' "
+      STDERR.puts errMsg 
+      LOG.puts errMsg
+    }
+    next
+  end
+  tf = Tailer.new(path)
+  tailableFiles.push(tf)
+end; nil 
+
+
+while true do 
+  # lista that contains all Logs (in form of Ruby Hashes) to be sent
+  # in batch to Elasticsearch
+  rubyLineDizBuffer = []
+
+  # elaborate each tailFile (that is all logFiles)
+  tailableFiles.each do |tf|
+    # parse each new line in a logfile and put it into a buffer called "rubyLineDizBuffer"
+    tf.getLines.each do|line| 
+      # to avoid problem with non UTF-8 charactres while parsing 
+      # further problems may happen in "tail-file" looking for newlines.
+      safeLine = line.encode!('UTF-8', :invalid => :replace)
+      ll = LogLine.new(safeLine)
+      rubyLineDiz = ll.parse
+      # add a field containing all the log line, this simplifies searching
+      rubyLineDiz["src"] = ll.line
+      # add the filename, cause it is not included in loglines
+      rubyLineDiz["file"] = File.basename(tf.f)
+      rubyLineDizBuffer.push(rubyLineDiz)
+    end
+  end 
+  # se non ci sono dati salta il resto, aspetta un po e rifai
+  if rubyLineDizBuffer.length == 0 
+    sleep 1
+    next
+  end
+  
+  # -] puts rubyLineDizBuffer
+  # numLogs, batchBytes, res = et.postLogBatch(index="lclslogs", type="log", 
+  #                                            rubyLineDizBuffer, fake: false)
+
+  # errors = JSON.parse(res.body)['errors']
+  # loggerLine =  "numLogs: #{numLogs}, batchBytes: #{batchBytes}, errors: #{errors}"
+
+  # puts "-------------------------"
+  # puts rubyLineDizBuffer
+  # puts st.formatLogBatchAsXML(rubyLineDizBuffer)
+
+  # -] puts rubyLineDizBuffer
+  begin 
+    numLogs, batchBytes, res = st.addLogsBatchXML(index="lclsLogs", rubyLineDizBuffer)
+  rescue Exception => ex 
+    puts ex
+  else
+    puts %Q{ summary: #{[numLogs, batchBytes, res]} \n}    
+  end
+
+
+
+
+  # -] NEW ============================================
+
+  # univmssDizListBuffer = []
+  # # per permettere a Wilko di modificare il formato 
+  # # dei dati senza bloccare tutta l'applicazione.
+  # begin 
+  #   rubyLineDizBuffer.each do |d|
+  #     if d['service'].match /univmss/ then
+  #       # puts d
+  #       txt = d['message'].dup
+  #       m = txt.match /\Atype (?<type>put|get)/
+  #       if m[:type] == "put" then 
+  #         fields = txt.split
+  #         d['type'] = "put"
+  #         d['elapms'] = fields[3].to_i
+  #         d['size'] = fields[5].to_i
+  #         d['rc'] = fields[7].to_i
+  #         d['lfn'] = fields[8]
+  #         d['tfb'] = fields[9]
+  #         univmssDizListBuffer.push(d)
+  #       elsif m[:type] == "get" 
+  #         fields = txt.split
+  #         # get fields
+  #         d['type'] = "get"
+  #         d['elapms'] = fields[3].to_i
+  #         d['size'] = fields[5].to_i
+  #         d['rc'] = fields[7].to_i
+  #         d['lfn'] = fields[8]
+  #         d['tfn'] = "nil"
+  #         univmssDizListBuffer.push(d)        
+  #       end
+  #     else
+  #       nil
+  #     end    
+  #   end
+  # rescue Exception => ex 
+  #   # in case of errors forget all work done, it may be all wrong.
+  #   univmssDizListBuffer = []
+  # end
+
+  # if univmssDizListBuffer.length != 0 then 
+  #   # puts univmssDizListBuffer
+  #   numLogs, batchBytes, res = et.postLogBatch(index="univmss", type="univmssLog", 
+  #                                              univmssDizListBuffer, fake: false)
+  # end
+
+  # ===========================================
+
+
+
+  # -] force immediate writing of logline into the its logfile
+  # LOG.puts loggerLine
+  # LOG.flush
+
+  # system("logger 'BatchToElastic: #{loggerLine}  '")
+  # binding.pry
+
+  sleep 1
+end 
+
+LOG.close
+@
+
+
+1.6
+log
+@Summary: cambiato formato delle linee Univmms
+@
+text
+@d3 2
+d10 2
+a11 1
+require_relative "../lib/elasticTalk"
+d22 4
+d27 2
+a28 2
+et = ElasticTalk.new(ipv4Str, "9200")
+fail "Error, Elasticsearch is not reachable" if not et.is_elasticReachable?
+d33 1
+d35 1
+d37 3
+d63 1
+d92 2
+a93 2
+  numLogs, batchBytes, res = et.postLogBatch(index="lclslogs", type="log", 
+                                             rubyLineDizBuffer, fake: false)
+d95 2
+a96 2
+  errors = JSON.parse(res.body)['errors']
+  loggerLine =  "numLogs: #{numLogs}, batchBytes: #{batchBytes}, errors: #{errors}"
+d98 3
+d102 1
+a102 5
+  # -] NEW ============================================
+
+  univmssDizListBuffer = []
+  # per permettere a Wilko di modificare il formato 
+  # dei dati senza bloccare tutta l'applicazione.
+d104 1
+a104 29
+    rubyLineDizBuffer.each do |d|
+      if d['service'].match /univmss/ then
+        # puts d
+        txt = d['message'].dup
+        m = txt.match /\Atype (?<type>put|get)/
+        if m[:type] == "put" then 
+          fields = txt.split
+          d['type'] = "put"
+          d['elapms'] = fields[3].to_i
+          d['size'] = fields[5].to_i
+          d['rc'] = fields[7].to_i
+          d['lfn'] = fields[8]
+          d['tfb'] = fields[9]
+          univmssDizListBuffer.push(d)
+        elsif m[:type] == "get" 
+          fields = txt.split
+          # get fields
+          d['type'] = "get"
+          d['elap'] = fields[3].to_i
+          d['size'] = fields[5].to_i
+          d['rc'] = fields[7].to_i
+          d['lfn'] = fields[8]
+          d['tfn'] = "nil"
+          univmssDizListBuffer.push(d)        
+        end
+      else
+        nil
+      end    
+    end
+d106 3
+a108 2
+    # in case of errors forget all work done, it may be all wrong.
+    univmssDizListBuffer = []
+d111 48
+a158 5
+  if univmssDizListBuffer.length != 0 then 
+    # puts univmssDizListBuffer
+    numLogs, batchBytes, res = et.postLogBatch(index="univmss", type="univmssLog", 
+                                               univmssDizListBuffer, fake: false)
+  end
+d162 2
+d165 2
+a166 2
+  LOG.puts loggerLine
+  LOG.flush
+@
+
+
+1.5
+log
+@Summary: aggiunto il field "src" che contiene la riga del messaggio di log, utiler per ricerche rapide.
+@
+text
+@d96 2
+a97 3
+        # ci sono due tipi xfer:put o xfer:get 
+        if txt.match /xfer:put/ then         
+          txt.sub! /xfer:/, "xfer "
+a98 1
+          # puts fields
+d100 1
+a100 1
+          d['elap'] = fields[3].to_i
+d106 1
+a106 2
+        elsif txt.match /xfer:get/
+          txt.sub! /xfer:/, "xfer "
+d114 1
+a114 1
+          d['tfb'] = "nil"
+@
+
+
+1.4
+log
+@Summary: ok
+@
+text
+@d65 2
+@
+
+
+1.3
+log
+@Summary: ok
+@
+text
+@d87 38
+a124 31
+  rubyLineDizBuffer.each do |d|
+    if d['service'].match /univmss/ then
+      # puts d
+      txt = d['message'].dup
+      # ci sono due tipi xfer:put o xfer:get 
+      if txt.match /xfer:put/ then         
+        txt.sub! /xfer:/, "xfer "
+        fields = txt.split
+        # puts fields
+        d['type'] = "put"
+        d['elap'] = fields[3].to_i
+        d['size'] = fields[5].to_i
+        d['rc'] = fields[7].to_i
+        d['lfn'] = fields[8]
+        d['tfb'] = fields[9]
+        univmssDizListBuffer.push(d)
+      elsif txt.match /xfer:get/
+        txt.sub! /xfer:/, "xfer "
+        fields = txt.split
+        # get fields
+        d['type'] = "get"
+        d['elap'] = fields[3].to_i
+        d['size'] = fields[5].to_i
+        d['rc'] = fields[7].to_i
+        d['lfn'] = fields[8]
+        d['tfb'] = "nil"
+        univmssDizListBuffer.push(d)        
+      end
+    else
+      nil
+    end    
+@
+
+
+1.2
+log
+@Summary: temporaneo con parsing dati dei TAPE
+@
+text
+@d89 1
+a89 1
+      puts d
+d121 1
+a121 1
+    puts univmssDizListBuffer
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d55 1
+d79 1
+d82 45
+@

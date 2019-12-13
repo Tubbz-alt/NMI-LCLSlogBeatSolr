@@ -1,0 +1,8 @@
+
+# LCLSlogBeatSolr 
+
+This program read the log files produced by several LCLS servers, parses them and send them in batch to Solr every 1-second. 
+
+The name 'beat' is kept because is kind of standard in ELK workld. It means nothing special. 
+
+ 
